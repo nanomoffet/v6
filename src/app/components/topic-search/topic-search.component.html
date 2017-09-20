@@ -1,0 +1,4 @@
+<h5 style="padding:0px;">{{TopicSearch.title}}</h5>
+  <ul [ngClass]="{ 'topic-search': true, 'per-row': rowClass }">
+      <li *ngFor="let topic of TopicSearch.topicList" class="badge badge-pill badge-default"><a><i class="fa fa-search" aria-hidden="true"></i> {{topic.description}} {{topic.value}}</a></li>  
+  </ul>

@@ -1,0 +1,92 @@
+.baseFbanner {
+    text-align: center;
+}
+
+.baseFbanner img {
+    max-width:100%;
+}
+
+.baseF3col, .baseF5col  {
+    text-align: center;
+}
+.baseF3col img {
+    max-width:80%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.baseF4col img {
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.topic-search {
+    list-style: none;
+    padding:2px 2px 2px 2px;
+}
+.topic-search a {
+    cursor:pointer;
+}
+.topic-search i {
+    font-size: 0.5em;
+    vertical-align: top;
+    margin-top: 0.5em;
+}
+
+
+.first-link {
+    display:inline-block;
+	padding:0px !important;
+	background-image: url('/assets/images/booksale.jpg');
+    height:200px;
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.second-link {
+    display:inline-block;
+	padding:0px !important;
+	background-image: url('/assets/images/page2_pic2.jpg');
+    height:200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+.third-link {
+    display:inline-block;
+	padding:0px !important;
+	background-image: url('/assets/images/page4_pic45.jpg');
+    height:200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.fourth-link {
+    display:inline-block;
+	padding:0px !important;
+	background-image: url('/assets/images/lgp-safety.jpg');
+    height:200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+
+
+
+
+@media screen and (min-width: 576px) {
+    .baseF3col img {
+        width:100%;
+        max-width:320px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .baseF3col img {
+        width:100%;
+        max-width:320px;
+    }
+}

@@ -1,0 +1,7 @@
+<!-- Firefox inconsistencies, using angular material for a unified style
+<label [for]="for">{{name}}</label>
+<input [id]="id" [name]="id" [type]="type" [value]="value" /> 
+-->
+<label *ngIf="!edit" [for]="for">{{name}}</label>
+<input *ngIf="edit" [(ngModel)]="name" type="text" class="input-label">
+<md-checkbox [name]="id" [id]="id" [value]="value"></md-checkbox> 

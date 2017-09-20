@@ -1,0 +1,210 @@
+﻿
+.sign-up {
+	text-align:center;
+	vertical-align: middle;
+	border-top: 3px solid #BFB9BC;
+	background:#3f51b5;
+	padding:25px 20px;
+}
+.signupInput {
+    padding: 11px;
+	width: 80%;
+	margin-bottom:15px;
+}
+.footer-location {
+	background:#283593;
+}
+.location {
+	padding: 25px;
+	color:white;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+.location i {
+	display:inline-block;
+	width:50px;
+	text-align:right;
+	vertical-align: top;
+	padding-right:10px;
+	line-height:1.5em;
+}
+
+.footer-links {
+	background:#e3f2fd;
+	margin-right: 0px;
+    margin-left: 0px;
+}
+.footer-links a {
+	display:block;
+	font-size:0.85em;
+	color:#283593;
+	cursor:pointer;
+	line-height: 1.5em;
+	font-weight:600;
+}
+.footpad {
+	padding:15px 15px 15px 25px;
+}
+.footpad a:focus, .footpad a:hover {
+	text-decoration:underline;
+}
+.followUs {
+	padding:15px;
+}
+.followUs a {
+	font-size:2.5em;
+	display:inline-block;
+	padding:5px;
+}
+
+.followUs a:focus, .followUs a:hover {
+	text-decoration:underline;
+}
+.footer-ads {
+	padding:25px;
+}
+.footer-ad {
+	background:#283593;
+	color:white;
+	margin:15px 0px;
+	padding:15px 25px;
+    max-width: 350px;
+	display: inline-block;
+	cursor:pointer;
+	-webkit-border-radius:5px;
+	 -khtml-border-radius:5px;
+	   -moz-border-radius:5px;
+	    -ms-border-radius:5px;
+	     -o-border-radius:5px;
+	        border-radius:5px;
+}
+.footer-ad-icon {
+	display:inline-block;
+	width:25%;
+	text-align:center;
+	margin-top: 5%;
+}
+.footer-ad-content {
+	display:inline-block;
+	width:55%;
+	vertical-align: top;
+    padding-top: 5px;
+}
+.footer-ad-content-only {
+	display:block;
+	width:100%;
+}
+
+.footer-Connect {
+	padding-top:20px;
+    background: #552E17;
+    color: #FCFAE1;
+}
+.footer-Connect p {
+	font-size:0.9em;
+}
+.footer-Connect a {
+    color:white;
+	text-decoration:underline;
+}
+
+.hours-location{
+	width:95%;
+	display:block;
+	margin:2% auto;
+}
+.phone-number {
+	color:white;
+	font-size:1.65em;
+	padding:5px;
+}
+.phone-number i {
+	display: inline-block;
+	width:50px;
+}
+.phone-number a {
+	display: inline-block;
+	width:calc(100% - 60px);
+}
+.address, .email {
+	font-family: roboto;
+	display:block;
+	font-size:1.1em;
+	padding:5px;	
+}
+.address i, .email i {
+	display:inline-block;
+	width:50px;
+	
+}
+.address > div {
+	display:inline-block;
+	width:calc(100% - 60px);
+}
+.email a {
+	display:inline-block;
+	font-size:1.15em;
+	width:calc(100% - 60px);
+	color:white;
+	cursor:pointer;
+}
+.email a:hover, .email a:focus {
+	color:white;
+	cursor:pointer;
+}
+.get-directions:hover, .get-directions:focus {
+	color:white !important;
+	cursor:pointer;
+}
+.hours {
+	display:block;
+	font-size:1em;
+	padding:5px;
+}
+.hours i {
+	display:inline-block;
+	width:50px;
+}
+.hours > div {
+	display:inline-block;
+	width:calc(100% - 60px);
+}
+#maps {
+	width:100%;
+	height:auto;
+}
+.slim-map {
+	width: 100%;
+	height:240px;
+	background-image: url(../../../assets/images/rmpl_stylesheet.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+@media screen and (min-width: 576px) {
+}
+
+
+@media screen and (min-width: 768px) {
+	.gutter-md-up {
+		margin:0 50px;
+		padding:0 15px;
+	}
+	.address, .email {
+		font-family: roboto;
+		display:block;
+		font-size:0.85em;
+		padding:5px;	
+	}
+	.footer-links {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+}
+
+
+@media screen and (min-width: 992px) {
+
+}

@@ -1,0 +1,12 @@
+
+.form-group .d-inline-flex > span:not(.sr-only) {
+        font-size: 1.75em !important;
+}
+.star-rating {
+    margin-left:15px;
+}
+/*
+.d-inline-flex {
+    font-size: 1.75 !important;
+}
+*/

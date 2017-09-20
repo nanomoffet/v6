@@ -1,0 +1,79 @@
+
+<div class="container">
+  <h2>{{ItemsOut.data.agItems.totalItems}} Items Out</h2>
+  <div class="container text-center alert alert-warning">
+        <h4>Alert</h4>
+        You have <b>Overdues</b><br /> 
+        See the Librarian if you have questions.
+  </div>
+  <div class="container item-card card" *ngFor="let itemsOut of ItemsOut.data.agItems.items">
+    <div class="summary-card">
+      <img src="assets/images/jacket_01.jpg" style="max-width: 150px;box-shadow: 0px 5px 8px #999;" />
+      <div class="summary-info">
+          <h5>{{itemsOut.Title}}</h5>
+          <span>Due Date: <b [ngClass]="{'red-danger': itemsOut.IsDueDatePassed==true}">{{itemsOut.DueDateDisplay}}</b></span><br />
+          <span>Status: </span><span [ngClass]="{'red-danger': itemsOut.IsDueDatePassed}">{{itemsOut.RenewStatusDisplay}}</span><br />
+          <span>Fines: <b [ngClass]="{'red-danger': itemsOut.IsDueDatePassed==true}">${{itemsOut.Fine}}</b></span><br />
+      </div>
+      <div class="detail-toggle text-center text-middle">
+          <i class="fa fa-4x fa-angle-right" aria-hidden="true"></i>
+      </div>    
+    </div>
+    <div class="detail-card">
+          <h4>Item Details</h4>
+          <ul class="detail-list">
+              <li><b>Title: &nbsp;</b><span>{{itemsOut.Title}}</span></li>
+              <li><b>Author: &nbsp;</b><span>{{itemsOut.Author}}</span></li>
+              <li><b>ISBN: &nbsp;</b><span style="margin-right:15px;" *ngFor="let isbn of itemsOut.ISBN.string">{{isbn}}</span></li>
+              <li><b>Barcode: &nbsp;</b><span>{{itemsOut.Barcode}}</span></li>
+              <li><b>Call Number: &nbsp;</b><span >{{itemsOut.CallNumber}}</span></li>        
+              <li><b>Status: &nbsp;</b><span [ngClass]="{'red-danger': itemsOut.IsDueDatePassed}">{{itemsOut.RenewStatusDisplay}}</span></li>
+              <li><b>Date Out: &nbsp;</b><span>{{itemsOut.DateSetStr}}</span><br />
+              <li><b>Date Due: &nbsp;</b><span [ngClass]="{'red-danger': itemsOut.IsDueDatePassed}">{{itemsOut.DueDateDisplay}}</span></li>
+              <li><b>Renew Limit: &nbsp;</b><span>{{itemsOut.RenewLimit}}</span></li>
+              <li><b>Fine: &nbsp;</b><span [ngClass]="{'red-danger': itemsOut.IsDueDatePassed}">{{itemsOut.Fine}}</span></li>
+          </ul>
+          <a title="Renew Item" class="btn mx-auto btn-primary" href=""><i class="fa fa-repeat"></i> Renew Item</a>  
+    </div>
+  </div>
+
+<!--
+<div>
+  <ul class="itemsOut-ul">
+      <li class="itemsOut-list" *ngFor="let itemsOut of ItemsOut.data.agItems.items">
+        <span class="itemsOut-span">HoldingsID: {{itemsOut.HoldingsID}}</span><br />
+        <span class="itemsOut-span">Title: {{itemsOut.Title}}</span><br />
+        <span class="itemsOut-span">Author:{{itemsOut.Author}}</span><br />
+        <span class="itemsOut-span">Barcode:{{itemsOut.Barcode}}</span><br />
+        <span class="itemsOut-span">CallNumber:{{itemsOut.CallNumber}}</span><br />
+        <span class="itemsOut-span">Fine:{{itemsOut.Fine}}</span><br />
+        <span class="itemsOut-span">IsDueDatePassed:{{itemsOut.IsDueDatePassed}}</span><br />
+        <span class="itemsOut-span">DueDateDisplay:{{itemsOut.DueDateDisplay}}</span><br />
+        <span class="itemsOut-span">ItemLibPK:{{itemsOut.ItemLibPK}}</span><br />
+        <span class="itemsOut-span">CanRenew:{{itemsOut.CanRenew}}</span><br />
+        <span class="itemsOut-span">RenewedAlreadyCount:{{itemsOut.RenewedAlreadyCount}}</span><br />
+        <span class="itemsOut-span">RenewStatusDisplay:{{itemsOut.RenewStatusDisplay}}</span><br />
+        <span class="itemsOut-span">ShowILLLink:{{itemsOut.ShowILLLink}}</span><br />
+        <span class="itemsOut-span">IllRequestID:{{itemsOut.IllRequestID}}</span><br />
+        <span class="itemsOut-span">IllCurrStatus:{{itemsOut.IllCurrStatus}}</span><br />
+        <span class="itemsOut-span">RenewCheckedByDefault:{{itemsOut.RenewCheckedByDefault}}</span><br />
+        <span class="itemsOut-span">CheckoutLibName:{{itemsOut.CheckoutLibName}}</span><br />
+        <span class="itemsOut-span">RenewLimit:{{itemsOut.RenewLimit}}</span><br />
+        <span class="itemsOut-span">IsTitleOrHldReserved:{{itemsOut.IsTitleOrHldReserved}}</span><br />
+        <span class="itemsOut-span">CanPatronDeleteReserve: {{itemsOut.CanPatronDeleteReserve}}</span><br />
+        <span class="itemsOut-span">DateSetStr: {{itemsOut.DateSetStr}}</span><br />
+        <span class="itemsOut-span">Enum: {{itemsOut.Enum}}</span><br />
+        <span class="itemsOut-span">Chron: {{itemsOut.Chron}}</span><br />
+        <span class="itemsOut-span">AGControlId: {{itemsOut.AGControlId}}</span><br />
+        <span class="itemsOut-span">UPC: {{itemsOut.UPC}}</span><br />
+        <span class="itemsOut-span">OCLC: {{itemsOut.OCLC}}</span><br />
+        <span class="itemsOut-span">vendorId: {{itemsOut.vendorId}}</span><br />                   
+        <div *ngFor="let isbn of itemsOut.ISBN.string" style="padding:15px; background:lightgrey;">
+                {{isbn}}
+        </div>      
+      </li>
+  </ul>
+</div>
+-->
+
+</div>

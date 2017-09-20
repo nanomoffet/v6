@@ -1,0 +1,318 @@
+.dropdown-container {
+    display: inline-block;
+    width: 100%;
+    padding: 3px 10px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size:1.15em;
+    color:grey;
+}
+.bread-home {
+    display: inline-block;
+    cursor:pointer;
+}
+.bread-home i {
+    font-size:1.25em;
+    padding:5px;
+}
+.bread-home:hover i, .bread-home:focus i {
+    color:#6f0000;
+}
+.bread-crumb-tier {
+    display: inline-block;
+    color:lightgrey;
+    font-size:1.15em;
+    padding:5px;
+}
+.bread-crumb {
+    display: inline-block;
+    color:grey;
+    padding:5px;
+}
+.bread-crumb:hover, .bread-crumb:focus {
+    color:#6f0000;
+    cursor:pointer;
+}
+.bread-crumb i {
+    color:#aaa;   
+}
+.bread-crumb:hover i, .bread-crumb:focus i {
+    color:#6f0000;
+}
+.bread-crumb-trail {
+    display: inline-block;
+    color:#454545;
+    padding:5px;
+}
+.bread-crumb-trail i {
+    color:grey;
+    padding:5px;
+}
+
+
+.record-image {
+    text-align: center;
+    width:100%;
+    padding-bottom:25px;
+}
+.record-image img {
+    width:100%;
+    max-width: 150px;
+    box-shadow: 0px 5px 8px #999;
+}
+
+
+.record-author {
+    color: #6f0000;
+    margin-top:25px;
+}
+.record-title {
+    font-size: 1.5rem;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+.record-publisher-date {
+    font-size:1.25em;
+}
+.record-isbn {
+    font-weight: 500;
+
+}
+.record-ratings {
+    color:#6f0000;
+}
+.record-available {
+    display:inline-block;
+    width:45%;
+    padding:5px;
+    margin:10px 5px;
+    background:#f7f7f7;
+    color:#454545;
+    font-weight:bold;
+    font-size:0.85em;
+}
+.record-holds {
+    display:inline-block;
+    width:45%;
+    padding:5px 5px 5px 10px;
+    margin:10px 5px;
+    background:#f7f7f7;
+    color:#454545;
+    font-weight:bold;
+    font-size:0.85em;
+}
+.record-desc {
+    font-size: 0.9em;
+}
+.record-buttons {
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align: center;
+}
+.record-buttons button {
+    min-width:60%;
+    max-width:300px;
+    margin:5px 0px;
+}
+.record-share {
+    padding:15px;
+
+}
+.record-social-list {
+    list-style: none;
+    padding:0px;
+}
+.record-social-list li {
+    display:inline-block;
+    font-size:2em;
+    padding:0px 5px;
+    margin: 0px 3%;
+    color:#999;
+}
+.record-social-list li:hover, .record-social-list li:focus {
+    color:#6f0000;
+    cursor:pointer;
+}
+
+.record-category-links {
+    display:inline-block;
+    color: #6f0000;
+    text-decoration: underline;
+    background: #eee;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0px;
+    width: 48%;
+    padding: 5px;
+    margin-top: 3px;
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.85em;
+    margin-bottom: 3px;
+}
+.record-category-links:hover, .record-category-links:focus {
+    background:lightgrey;
+}
+.record-content {
+    padding:10px;
+    font-size:0.85em;
+}
+.record-content h6 {
+    padding-top:20px;
+}
+.record-group {
+
+}
+.record-group h3 {
+    margin-top:20px;
+}
+.tablesortNhoney {
+    
+}
+.tablesortNhoney td {
+    padding:5px 10px;
+}
+
+.review-group {
+    padding-top:5px;
+    padding-bottom:10px;
+}
+
+.review-by {
+    display:block;
+    font-size:1.25em;
+    font-weight:bold;
+}
+.review-ratings {
+    display: inline-block;
+    margin-right: 25px;
+    font-size: 1.5em;
+    color: #6f0000;
+}
+.review-timestamp {
+    display:inline-block;
+    font-style:italic;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 576px) {
+    .record-image {
+        width:180px;
+        float: left;
+    }
+    .record-desc {
+        width: calc(100% - 190px);
+        float: left;
+        padding:10px;
+        font-size:1.25em;
+    }
+    .record-available {
+        width:initial;
+        padding:5px 10px;
+    }
+    .record-holds {
+        width:initial;
+        padding:5px 10px;
+    }
+    .record-ratings .form-group {
+        margin-bottom:0px;
+    }
+    .record-author {
+        margin-top:5px;
+        font-size:1.15em;
+    }
+    .record-image {
+        padding-top:20px;
+    }
+    .record-content {
+        padding: 10px 0px;
+    }
+    .record-share {
+        
+    }
+    .record-share .share-desc {
+        float:left;
+        width: 100px;
+        padding:5px 15px;
+        font-size:1.25em;
+    }
+    .record-share .record-social-list {
+        float:left;
+        width: calc(100% - 300px);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (min-width: 992px) {
+    .record-image {
+        text-align: left;
+        padding-top:25px;
+        padding-left:10px;
+    }
+    .record-summary {
+        width: calc(100% - 390px);
+        float: left;
+        padding: 10px;
+    }
+    .record-desc {
+        width:auto;
+        font-size: 1.2em;
+    }
+    .record-share .share-desc {
+        width:100%;
+    }
+    .record-share .record-social-list {
+        width:100%;
+    }
+    .record-social-list li {
+        font-size: 2.5em;
+    }
+    .record-content{
+        font-size:1em;
+    }
+    .record-buttons {
+        width:200px;
+        padding-top:50px;
+    }
+    .record-buttons button {
+        min-width:100%;
+    }
+    .record-category-links {
+        width:auto;
+        padding-left:15px;
+        padding-right:15px;
+        margin:2px 5px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .record-author {
+        font-size:1.5em;
+    }
+    .record-title {
+        font-size: 2.5rem;
+    }
+    .record-publisher-date {
+        font-size:1.75em;
+    }
+    .record-isbn {
+        font-size: 1.5em;
+    }
+    .record-ratings {
+        font-size:1.25em;
+    }
+}
+

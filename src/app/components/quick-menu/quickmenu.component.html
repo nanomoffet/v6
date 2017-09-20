@@ -1,0 +1,98 @@
+<!-- <div class="icon-badge" title="Quick Menu">
+    <i [class]="icon" aria-hidden="true"></i>
+    <span class="badge badge-pill badge-default">{{badgeNumber}}</span>
+</div>
+-->
+  
+<div class="icon-badge"
+      #qmenu="ngbPopover" 
+      placement="bottom"
+      (document:click)="qmenu.close()" (click)="$event.stopPropagation()"       
+      [popoverTitle]="popOverTitle"
+      [ngbPopover]="popQMmenu"     
+      >
+          <i [class]="icon" aria-hidden="true"></i>
+          <span class="badge badge-pill badge-default">{{badgeNumber}}</span>
+</div>
+
+<!-- 
+<ng-template #popQMmenu style="width:250px;">
+  <div *ngFor="let msg of popOverContent"> 
+      <a href="link"  style="display:inline-block;">
+         <div class="img-area">
+                  <img [ngClass]="{'photo-msg-item': !msg.image}" src="" />
+          </div> 
+          <div class="msg-area">
+            <span>{{ msg.text }}</span>
+            <span>{{ msg.time }}</span>
+          </div>
+      </a>
+    </div>
+</ng-template>
+-->
+
+<ng-template #popQMmenu style="width:260px;">
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/link-showcase"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>1.) Links - Product Showcase</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/showcase-link"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>2.) Product Showcase - Links</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-a"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>3.) Banner Only (responsive)</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-b"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>4.) Carousel, Topic Searches, and Showcases</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-c"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>5.) Carousel, Showcases, and Topic Searches</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-d"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>6.) Carousel, Duel Row Showcases</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-e"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>7.) Banner, A Links, Duel CTAs</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-f"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>8.) Carousel, A Links, 4 CTAs, Showcase, and Topic Searches</span>
+            </div>
+        </a>
+    </div>
+    <div style="min-width:180px;margin-bottom:5px;">
+        <a href="/#/body/home/base-g"  style="display:inline-block;"> 
+            <div class="msg-area">
+              <span>9.) Banner, Image Links</span>
+            </div>
+        </a>
+    </div>
+  </ng-template>

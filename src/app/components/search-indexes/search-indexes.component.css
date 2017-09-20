@@ -1,0 +1,8 @@
+select {
+    height:35px;
+}
+option {
+    padding:7px 5px;
+    font-size:1.5em;
+    display: block;
+}

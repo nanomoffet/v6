@@ -1,0 +1,49 @@
+.ba-back-top {
+  position: fixed;
+  z-index: 1030;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  display: none;
+  font-size: 45px;
+  text-align: center;
+  color: #3f51b5;
+  text-decoration: none;
+  right: 40px;
+  bottom: 40px;
+  opacity: 0.85;
+  background-color: rgba(255, 255, 255, 1.0);
+  box-shadow: 0px 2px 3px #000;
+  border-radius: 50%;
+  line-height: 45px;
+}
+.ba-back-top:hover {
+    opacity: 1.0;
+}
+
+@media screen and (min-width: 768px) {
+    .ba-back-top {
+      position: fixed;
+      z-index: 1030;
+      width: 50px;
+      height: 150px;
+      cursor: pointer;
+      display: none;
+      vertical-align:middle;
+      font-size: 45px;
+      text-align: center;
+      color: #3f51b5;
+      text-decoration: none;
+      right: 0px;
+      bottom: 0px !important;
+      opacity: 0.85;
+      background-color: rgba(255, 255, 255, 1.0);
+      box-shadow: none;
+      border-radius: 0px;
+      line-height: 4em;
+      }
+    .ba-back-top:hover {
+      opacity: 1.0;
+      }
+
+}

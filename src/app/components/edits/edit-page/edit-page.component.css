@@ -1,0 +1,349 @@
+#edit-overlay {
+    z-index: 1100;
+    background: #000;
+    background: -webkit-gradient(radial,50% 25%,0,50% 25%,800,from(rgba(0,0,0,.35)),to(rgba(0,0,0,.5))) transparent;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    color: #999;
+    -webkit-transition: all .2s cubic-bezier(.645,.045,.355,1);
+    transition: all .2s cubic-bezier(.645,.045,.355,1);
+}
+.control-panel-dialog {
+    position: fixed;
+    overflow: hidden;
+    z-index: 1101;
+    width:550px;
+    right: 11px;
+    top:11px;
+    bottom:11px;
+    height: calc(100vh - 30px);
+    background: #f2f2f2;
+    box-shadow: 0 4px 33px rgba(0,0,0,.22), 0 0 0 1px rgba(0,0,0,.04);
+    border-radius: 4px;
+    max-height: 100%;
+}
+.control-panel-dialog.visible {
+    -webkit-transform: scale(1) translate3d(0,0,0);
+    transform: scale(1) translate3d(0,0,0);
+    opacity:1;
+}
+.edit-content {
+    height: calc(100% - 100px);
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.edit-header {
+    height:50px;
+    padding: 5px 10px;
+    border-bottom: 1px solid lightgrey;
+}
+.edit-title {
+    display:inline-block;
+    width: calc(100% - 225px);
+    padding:10px;
+}
+.edit-h6 {
+    color:grey;
+    font-size:0.9rem;
+    padding: 5px;
+}
+.edit-top-links {
+    display:inline-block;
+    width:220px;
+    text-align: right;
+    vertical-align: top;
+    padding:5px;
+}
+.edit-top-links a {
+    font-size:0.85rem;
+}
+.edit-top-links a.active {
+    font-weight:500;
+}
+.edit-top-links a:hover, .edit-top-links a:focus {
+    font-size:0.85rem;
+    cursor:pointer;
+    color:#454545;
+}
+
+.edit-buttons {
+    position:absolute;
+    bottom:0px;
+    height: 50px;
+    width:100%;
+    border-top: 1px solid lightgrey;
+}
+
+.edit-cancel, .edit-delete, .edit-save {
+    background: transparent;
+    height: 100%;
+    text-align:center;
+    border:0px;
+    color:grey;
+}
+.edit-cancel {
+    width:32.5%;
+    border-bottom-left-radius: 4px;
+}
+.edit-delete {
+    width:32.5%;
+}
+.edit-save {
+    width:33.25%;
+    border-bottom-right-radius: 4px;
+}
+.edit-cancel:hover, .edit-cancel:focus {
+    background: #fafafa;
+    cursor:pointer;
+    color:#454545;
+}
+.edit-delete:hover, .edit-delete:focus {
+    background: #ebcccc;
+    cursor:pointer;
+    color:#454545;
+}
+.edit-save:hover, .edit-save:focus {
+    background: #d0e9c6;
+    cursor:pointer;
+    color:#454545;
+}
+
+/* Form Styles  */
+
+.page-content-wrapper {
+    padding:25px 50px;
+}
+
+.page-content-wrapper input {
+    border: 1px solid transparent;
+}
+.page-content-wrapper input[type=checkbox] {
+    border: 1px solid transparent;
+    background-color: #fff;
+}
+.page-content-wrapper label {
+    margin-bottom:5px;
+    margin-left:5px;
+}
+.page-content-wrapper .form-text {
+    margin-left:5px;
+}
+.page-content-wrapper textarea {
+    border: 1px solid transparent;
+    background: #fff;
+}
+.page-content-wrapper select {
+    border: 1px solid transparent;
+    background: #fff;
+}
+.page-content-wrapper select[multiple] {
+    padding:5px 0px;
+}
+.page-content-wrapper select[multiple] option {
+    padding:5px;
+    text-indent:10px;
+}
+.page-content-wrapper input[type=file] {
+    padding:5px;
+    width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-icon-input {
+	display: inline-block;
+    vertical-align: top;
+	margin:15px 10px 15px 10px;
+	border-left:2px solid #ccc;
+	padding:12px 10px 12px 5px;
+	font-size:1em;
+	color:#3b4751;
+	cursor:pointer;
+}
+.search-icon-input:hover, .search-icon-input:focus {
+	background:#efefef;
+	color:#333;
+}
+.search-overlay .inner {
+    position: relative;
+    width: 100vw;
+    padding: 0 0px 0 30px;
+}
+.search-overlay .overlay {
+    position: relative;
+    width: 100vw;
+    padding: 0 0 0 25px;
+}
+.search-overlay .title {
+    display: inline-block;
+    font-weight: 100;
+    vertical-align: middle;
+    margin: 18px 0 0;
+    color: #333;
+    font-size: 0.85em;
+    font-weight:bold;
+    max-width:200px;
+}
+.search-overlay .exit {
+    display: block;
+    height: 30px;
+    width: 60px;
+    margin-top: 15px;
+    float: right;
+    color:#333 !important;
+    cursor: pointer;
+}
+.search-overlay .exit i {
+    font-size:1.5em;
+}
+.overlay-search {
+    font-weight: 700;
+    font-size: 2.5em;
+    height: 50px;
+    letter-spacing: -1.925px;
+    line-height: 100px;
+    width: 90%;
+    padding-left: 0!important;
+    border: none!important;
+    background-color: transparent!important;
+}
+.overlay-IndexResource {
+    padding:0 0 0 30px;
+}
+.overlay-index {
+    background:none !important;
+    border:none !important;
+    color:#999;
+    cursor:pointer;
+}
+.overlay-index option {
+    background:none !important;
+    border:2px solid #999;
+}
+.overlay-index select {
+    background:none !important;
+    border:none !important;
+    color:#999;
+    cursor:pointer;
+    width:150px;
+}
+.overlay-index select option {
+    background:none !important;
+    border:2px solid #999;
+}
+
+.overlay-resource{
+    cursor:pointer;
+}
+.overlay-suggestions {
+    padding: 10px 0 0 30px;
+    font-size:0.85em;
+}
+.suggest-phrase {
+    text-decoration: none;
+}
+.suggest-list {
+    list-style: none;
+}
+
+@media screen and (min-width: 576px) {
+    .search-overlay .inner {
+        padding: 0 60px 0 80px;
+    }
+    .search-overlay .overlay {
+        position: relative;
+        width: 100vw;
+        padding: 0 0 0 75px;
+    }
+    .search-overlay .title {
+        display: inline-block;
+        font-weight: 100;
+        vertical-align: middle;
+        margin: 18px 0 0;
+        color: #333;
+        font-size: 1.5em;
+        font-weight:bold;
+        max-width:initial;
+    }
+    .search-overlay .exit {
+        display: block;
+        height: 30px;
+        width: 60px;
+        margin-top: 15px;
+        float: right;
+        color:#333 !important;
+        cursor: pointer;
+    }
+    .search-overlay .exit i {
+        font-size:2.5em;
+    }
+    .overlay-search {
+        font-weight: 700;
+        font-size: 77px;
+        height: 100px;
+        letter-spacing: -1.925px;
+        line-height: 100px;
+        width: 100%;
+        padding-left: 0!important;
+        border: none!important;
+        background-color: transparent!important;
+    }
+    .overlay-IndexResource {
+        padding:0 0 0 80px;
+    }
+    .overlay-index {
+        background:none !important;
+        border:none !important;
+        color:#999;
+        cursor:pointer;
+    }
+    .overlay-index option {
+        background:none !important;
+        border:2px solid #999;
+    }
+    .overlay-resource{
+        cursor:pointer;
+    }
+    .overlay-suggestions {
+        padding: 10px 0 0 100px;
+        font-size:0.85em;
+    }
+    .suggest-phrase {
+        text-decoration: none;
+    }
+    .suggest-list {
+        list-style: none;
+    }
+}
+.overlay-search:focus{
+    outline: none;
+} 

@@ -1,0 +1,320 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="account-navigation d-none d-lg-block col-lg-4">
+            <sticky [sticky-offset-top]="100"
+                    [sticky-offset-bottom]="50"
+                    [sticky-start]="0" 
+                    [sticky-width]="25" 
+                    [sticky-zIndex]="1000" 
+                    [sticky-parent]="true" 
+                    [sticky-end-class]="stopSticky"	
+                    >
+                <nav id="Accounts" data-spy="affix" data-offset-top="100" scrollSpy>
+                    <!--
+                    <h3>Account</h3>
+                    -->
+                    <a href="#Account-Basics">Account Basics</a>
+                    <a href="#ccount-Profile">Profile</a>
+                    <a href="#Account-Preferences">Preferences</a>
+                    <a href="#Account-Resources">Resources</a>
+                    <a href="#Account-Notifcations">Notifications</a>
+                    <a href="#Account-SocialNetworks">Social Networks</a>
+                    <a href="#Account-WebLinks">Web Links</a>                    
+                    <a href="#Account-Security">Security</a>                    
+                    <!--          
+                    <h3>Transactions</h3>
+                    <a href="#">Items from Other Libraries</a>
+                    <a href="#">Items Out</a>
+                    <a href="#">Items on Hold</a>
+                    <a href="#">Lost Items</a>
+                    <a href="#">Active Alerts</a>
+                    <a href="#">Fine and Lost Item Payment</a>
+                    -->
+                </nav>
+            </sticky>
+
+        </div>
+        <div class="account-info col-12 col-lg-8">
+
+            <div id="Account-Basics" scrollSpyElement="test">
+                    <br /><br /><br />
+                    <h2>Account Basics</h2>
+                    <div class="form-group">
+                        <label for="Email1">Email address</label>
+                        <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password1">Password</label>
+                        <input type="password" class="form-control" id="password1" placeholder=" ">
+                        <small class="checkbox-container"><input type="checkbox" id="showpass" /> <label for="showpass">Show Password</label></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="language1">Languages</label>
+                        <select class="form-control" id="language1">
+                            <option>English (US)</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>Chinese</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div>Search History</div>
+                        <button id="searchhistory" class="btn btn-secondary">Clear Recent Searches</button>
+                        <div><small>Remove things you’ve recently searched for from search suggestions</small></div>
+                    </div>
+                    <div class="form-group">
+                        <div>Account</div>
+                        <button id="searchhistory" class="btn btn-secondary">Deactivate Account</button>
+                        <div><small>All your personal settings will be saved when you decide to re-activate it.</small></div>                        
+                    </div>
+            </div>
+            <div id="Account-Profile">         
+                    <br /><br /><br />
+                    <h2>Profile</h2>
+
+                    <act-profile></act-profile>
+
+
+
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder=" ">
+                    </div>
+                    <div class="form-group">
+                        <label for="MiddleName">Middle Name</label>
+                        <input type="text" class="form-control" id="MiddleName" placeholder=" ">
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder=" ">
+                    </div>
+                    <div class="form-group">
+                        <label for="add1">Address 1</label>
+                        <input type="text" class="form-control" id="add1" placeholder=" ">
+                    </div>
+                    <div class="form-group">
+                        <label for="add2">Address 2</label>
+                        <input type="text" class="form-control" id="add2" placeholder=" ">
+                    </div>                   
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder=" ">
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="state">State / Province</label>
+                                <input type="text" class="form-control" id="state" placeholder=" ">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder=" ">
+                            </div>
+                        </div>
+                    </div>                                    
+                    <div class="form-group">
+                        <label for="phone">Home /Primary Phone</label>
+                        <input type="text" class="form-control" id="LastName" placeholder=" ">
+                    </div>
+                    <div class="form-group">
+                        <label for="LDF11">LDF11</label>
+                        <input type="text" class="form-control" id="LDF11" placeholder=" ">
+                    </div>
+            </div>
+            <div id="Account-Preferences">
+                    <br /><br /><br />
+                    <h2>Preferences</h2>
+                    <div class="form-group">
+                        <label for="resultsort">Default Result Sort</label>
+                        <select class="form-control" id="resultsort">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="savedsearchhistory">Number of searches to save in History</label>
+                        <select class="form-control" id="savedsearchhistory">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="openingpage">Default Opening Page</label>
+                        <select class="form-control" id="openingpage">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fulltab">Default Full Record Tab</label>
+                        <select class="form-control" id="fulltab">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="advance1">Default Advanced Search First Index</label>
+                        <select class="form-control" id="advance1">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="advance2">Default Advanced Search Second Index</label>
+                        <select class="form-control" id="advance2">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="advance3">Default Advanced Search Third Index</label>
+                        <select class="form-control" id="advance3">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="defaultbrowseresource">Default Browse Resource</label>
+                        <select class="form-control" id="defaultbrowseresource">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="defaultbrowsesearch">Default Browse Search Index</label>
+                        <select class="form-control" id="defaultbrowsesearch">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="defaultscope">Default Scoping Level</label>
+                        <select class="form-control" id="defaultscope">
+                            <option>Use Library Default</option>
+                            <option>All Libraries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="scope1">Apply Scoping to All Searches</label>
+                        <select class="form-control" id="scope1">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+            </div>
+            <div id="Account-Resources">
+                <br /><br /><br />
+                <h2>Resources</h2>
+                <div class="resource-events row">
+                    <div class="resource-event col-6 col-sm-3">
+                        <i class="fa fa-square-o" aria-hidden="true"></i> Clear All
+                    </div>
+                    <div class="resource-event col-6 col-sm-3">
+                        <i class="fa fa-square-o" aria-hidden="true"></i> Check All
+                    </div>
+                    <div class="resource-event col-6 col-sm-3">
+                        <i class="fa fa-square-o" aria-hidden="true"></i> Reset All
+                    </div>
+                    <div class="resource-event col-6 col-sm-3">
+                        <i class="fa fa-square-o" aria-hidden="true"></i> Collapse All
+                    </div>
+                </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <!--
+                This would be the nested checkbox layout if determined.
+                -->
+            </div>
+            <div id="Account-Notifcations">
+                    <br /><br /><br />
+                    <h2>Notifications</h2>
+                    <p>We’ll always let you know about important changes on our website. Also choose any other options that you may want to subscribe to. </p>
+                    <div class="form-group">                    
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="notifyEmail" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="notifyEmail"> Notify me by Email</label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">                    
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="notifySMS" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="notifySMS"> Notify me by SMS Text Message</label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">                    
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="notifyNewsletter" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="notifyNewsletter"> Subscribe to our Monthly Newsletter</label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">                    
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="notifyEvents" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="notifyEvents"> Subscribe to our Events</label></div>                       
+                        </div>
+                    </div>
+            </div>
+            <div id="Account-SocialNetworks" class="social-color">
+                    <br /><br /><br />
+                    <h2>Social Networks</h2>
+                    <div class="form-group">
+                        <i class="fa fa-4x fa-facebook-square facebook-color" title="Facebook"></i>                      
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="facebook" [checked]="true"></md-slide-toggle>
+                            <div class="toggle-label"><label for=""> You are <b>Connected</b></label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-4x fa-twitter-square twitter-color" title="Twitter"></i>                      
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="Google" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="">You are <b>Not</b> Connected</label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-4x fa-google-plus-official google-color" title="Google +"></i>                      
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="Google" [checked]="true"></md-slide-toggle>
+                            <div class="toggle-label"><label for="">You are <b>Connected</b></label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-4x fa-pinterest pinterest-color" title="Pinterest"></i>                      
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="Pinterest" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="">You are <b>Not</b> Connected</label></div>                       
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <img class="logo" src="assets/images/goodreads_icon.jpg" title="GoodReads" style="width: 50px; margin-top: 10px; margin-left: 2px;"/>                                           
+                        <div class="slide-area">                      
+                            <md-slide-toggle [id]="Google" [checked]="false"></md-slide-toggle>
+                            <div class="toggle-label"><label for="">You are <b>Not</b> Connected</label></div>                       
+                        </div>
+                    </div>  
+            </div>
+            <div id="Account-WebLinks">
+                <br /><br /><br />
+                <h2>Weblinks</h2>
+                <div class="resource-events row">
+                    
+                </div>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <!--
+                This would be the nested checkbox layout if determined.
+                -->
+
+            </div>
+            <div id="Account-Security">
+                <br /><br /><br />
+                <h2>Security</h2>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+            <!--
+            <act-items-out></act-items-out>
+            -->
+        </div>   
+    </div>
+</div>

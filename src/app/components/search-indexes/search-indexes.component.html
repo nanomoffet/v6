@@ -1,0 +1,5 @@
+<select [(ngModel)]="selectedOption" (change)="onOptionChanged()">
+	<option *ngFor="let item of searchIndexes" [ngValue]="item">
+		{{item.text}}
+	</option>
+</select>

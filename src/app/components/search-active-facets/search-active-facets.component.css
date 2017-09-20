@@ -1,0 +1,18 @@
+.facet-pills {
+    padding:0;
+    max-height: 140px;
+    overflow: auto;
+    margin-bottom: 5px;
+}
+.facet-pills .badge-pill {
+    padding: 0.4em .5em;
+    margin: 0.2em 0.2em;
+}
+.facet-pills li:hover, .facet-pills li:focus {
+    cursor:pointer;
+    background:lightgrey;
+    border:grey;
+}
+.facet-pills i {
+    font-size:1.25em;
+}

@@ -1,0 +1,21 @@
+
+.icon-badge .popover {
+	width:240px !important;
+}
+
+.icon-badge {
+	
+}
+
+.popover-content {
+
+}
+
+.popover-content a {
+	padding:10px;
+}
+
+.popover-content a:hover {
+	cursor:pointer;
+	background:#efefef;
+}

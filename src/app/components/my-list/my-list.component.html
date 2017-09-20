@@ -1,0 +1,32 @@
+<!--  
+  <div class="icon-badge" title="Quick Menu">
+    <i [class]="icon" aria-hidden="true"></i>
+    <span class="badge badge-pill badge-default">{{badgeNumber}}</span>
+</div>
+
+ 
+-->
+<div class="icon-badge"
+      #mylist="ngbPopover" 
+      placement="bottom"
+      (document:click)="mylist.close()" (click)="$event.stopPropagation()"       
+      [popoverTitle]="popOverTitle"
+      [ngbPopover]="popMLmenu"     
+      >
+          <i [class]="icon" aria-hidden="true"></i>
+          <span class="badge badge-pill badge-default">{{badgeNumber}}</span>
+</div>
+     
+<ng-template #popMLmenu style="width:250px;">
+  <div *ngFor="let msg of popOverContent"> 
+      <a href="http://www.google.com" target="_blank" style="display:inline-block;">
+          <div class="img-area">
+                  <img [ngClass]="{'photo-msg-item': !msg.image}" src="" />
+          </div>
+          <div class="msg-area">
+            <span>{{ msg.text }}</span>
+            <span>{{ msg.time }}</span>
+          </div>
+      </a>
+    </div>
+</ng-template>

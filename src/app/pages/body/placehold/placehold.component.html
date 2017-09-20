@@ -1,0 +1,103 @@
+<!-- Breadcrumb -->
+<div class="dropdown-container" >
+    <span class="bread-home"><i class="fa fa-home" aria-hidden="true"></i></span>
+    <span class="bread-crumb-tier"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+    <span class="bread-crumb-trail"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Place Hold</span>
+</div>
+<br />
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Reserve a Title for - Jeanne d'Arc</h3>
+      <div><h6>Title & Author: </h6></div>
+      <div><h5>The crisis caravan : what's wrong with humanitarian aid? / Polman, Linda </h5></div>
+      <div><b><span class="reserve-expires">Reserve Expires on:</span><span class="reserve-expDate"> 11/14/2017</span></b></div>
+    </div>
+    <div class="col-12">
+      <div class="reserve-box row">
+            <div class="dropdown-box text-center text-md-left col-12 col-lg-4">
+                <h6 class="text-center text-md-left">Pickup Location:</h6>
+                <select class="select-location" >
+                  <option value="1">Arcadia Free Public Library</option><option value="2">Alma Public Library</option><option value="3">Black River Falls Public Library</option><option value="4">Blair-Preston Public Library</option><option value="5">Cashton Memorial Library</option><option value="6">Coon Valley Library (Knutson)</option><option value="7">Ettrick Public Library</option><option value="8">Elroy Public Library</option><option value="9">Galesville Public Library</option><option value="10">Hillsboro Public Library</option><option value="12">Kendall Public Library</option><option value="13">La Farge (Lawton Memorial Library)</option><option value="14">La Crosse County - Bangor</option><option value="15">La Crosse County - Campbell</option><option value="17">La Crosse County - Onalaska</option><option value="18">La Crosse County - West Salem</option><option value="19">Mauston (Hatch) </option><option value="20">La Crosse Public - Main</option><option value="21">Mondovi Public Library</option><option value="22">Necedah Memorial Library</option><option value="23">New Lisbon Memorial Library</option><option value="24">La Crosse Public - North</option><option value="25">Norwalk Public Library</option><option value="26">Ontario Public Library</option><option value="28">Sparta Free Library</option><option value="29">Strum Public Library</option><option value="30">Trempealeau Public Library</option><option value="31">Taylor Memorial Library</option><option value="32">Viroqua (McIntosh) Public Library</option><option value="33">Westby  (Bekkum) Public Library</option><option value="34">Wilton Public Library</option><option value="36">Wonewoc Public Library</option><option value="38">Main 2 test</option><option value="37">LIB2Home Pickup</option><option value="39">La Crosse  Public : South</option>
+                </select>
+            </div>
+            <div class="calendar-box text-center text-md-left col-12 col-sm-6 col-lg-4">
+                <h6 class="">Not Needed Before Date:</h6>
+                <input-calendar class="text-center text-md-left" [for]=" " [name]=" "[id]=" " [value]=" " [type]="'text'"></input-calendar>
+            </div>
+            <div class="calendar-box text-center text-md-left col-12 col-sm-6 col-lg-4">            
+                <h6 class="">Cancel if Not Filled by</h6>
+                <input-calendar class="text-center text-md-left" [for]=" " [name]=" "[id]=" " [value]=" " [type]="'text'"></input-calendar>
+            </div>
+        </div>
+    </div>   
+    <div class="col-12">
+       <div class="row">
+          <button class="any-items btn btn-secondary"><input type="checkbox" checked/> Reserve Any Items</button>
+          <table class="reserve-items table table-hover">
+            <thead class="thead-default">
+              <tr>
+                <th>Specific Item</th>
+                <th>Location</th>
+                <th>Call Number</th>
+                <th>Barcode</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td class=""><input type="checkbox" /></td>
+                  <td>La Crosse Public - Main</td>
+                  <td>wayIntheBack</td>
+                  <td>55573260</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td><input class="" type="checkbox" /></td>
+                  <td>La Crosse Public - Main</td>
+                  <td>wayIntheBack</td>
+                  <td>55573260</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>La Crosse Public - Main</td>
+                  <td>wayIntheBack</td>
+                  <td>55573260</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>La Crosse Public - Main</td>
+                  <td>wayIntheBack</td>
+                  <td>55573260</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>La Crosse Public - Main</td>
+                  <td>wayIntheBack</td>
+                  <td>55573260</td>
+                  <td>Available</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+    </div>
+    <div class="col-12">
+        <div class="reserve-buttons">
+          <button class="btn btn-primary">Reserve</button>
+          <button class="btn btn-link">Clear</button>
+        </div>
+        <div class="reserve-message">
+          <ba-alert [alertDismissible]="true" [alertType]="'success'" [alertMessage]="'Thank you for placing a hold. We have recieved the request and you will be getting an email and/or text depending on your settings. We Will confirm with you also when it is available for pickup.'"></ba-alert>
+        </div>
+    </div>
+
+  </div>
+
+</div>
+

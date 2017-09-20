@@ -1,0 +1,3 @@
+<label *ngIf="!edit" [for]="id">{{name}}</label>
+<input *ngIf="edit" [(ngModel)]="name" type="text" class="input-label">
+<textarea [id]="id" [name]="id" [placeholder]="placeholder" [rows]="rows" [cols]="cols"></textarea> 

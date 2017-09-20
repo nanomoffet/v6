@@ -1,0 +1,198 @@
+.feedback {
+    width:100%;
+    border: 1px solid lightgrey;
+    padding:15px;
+}
+select {padding:7px;}
+textarea {    width:90%;    font-size:1.35em;  }
+.feedback-desc {    line-height:1.5em;    padding:5px 10px;}
+.feedback-select {    padding:5px 10px;} 
+.feedback-buttons {    text-align:right; padding:15px 60px !important}
+
+.feedback-buttons input {
+    margin:0px 5px;
+}
+
+.feedback-details, .feedback-inputs, .feedback-buttons, .feedback-result  {
+    padding:5px 10px;
+}
+.feedback-input label {
+    display:block;
+    padding:5px;
+    margin:5px;
+}
+.feedback-inputs {
+    padding:5px;
+}
+.form-checkbox {
+    padding:0px 5px;
+    vertical-align: top;
+}
+.form-checkbox input[type=checkbox] {
+    width:22px;
+    height:22px;
+    margin-top: 5px;
+}
+.form-checkbox label {
+    padding-left:10px;
+    padding-bottom:3px;
+    font-size: 1.25em;
+    vertical-align: top;
+}
+.form-input {
+    position:relative;
+    margin-bottom:5px;
+}
+.form-input input, .form-input span, .form-input label, .form-input textarea { 
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 22px;
+}
+.form-input input::placeholder { opacity:0; }
+.form-input textarea:focus, .form-input input:focus { outline: 0; }
+
+.form-input input, .form-input textarea { 
+  font-size: 22px;
+  font-weight: 300;
+  border-radius: 2px;
+  padding-top: 24px;
+  margin: 0;
+  border: none;
+  width: 90%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+
+.form-input input:focus + label, .form-input input:focus + textarea {
+  /* do something with the label */
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;  margin: 0;
+  width: 10%; height: 0px;
+  border-top: 1px solid #999;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+}
+
+.form-input input + label,
+.form-input textarea + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;   margin: 0;
+  border-top: 1px solid #8F8F8F;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px; width: 90%;
+}
+
+
+
+
+.form-input input:focus + label, .form-input textarea:focus + label {  width: 90%;}
+
+.form-input textarea:valid, 
+.form-input textarea:focus {  margin-top: 35px;}
+
+input:focus + label > span,
+input:valid + label > span {
+  top: -65px;
+  font-size: 18px;
+  color: #8F8F8F;
+}
+
+
+
+textarea:focus + label > span,
+textarea:valid + label > span {
+  top: -65px;
+  font-size: 22px;
+  color: #8F8F8F;
+}
+
+input + label > span,
+textarea + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 22px;
+  top: -40px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+
+.form-input input:invalid,
+.form-input textarea:invalid {
+  box-shadow: none;
+}
+
+
+.form-input {
+    width: 95%;
+}
+
+.form-input .alert-success{
+    position: absolute;
+    top: 28px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    padding: 3px;
+}
+ .form-input.has-success input:invalid  {
+    border-bottom: 1px solid lightgrey !important;
+}
+ .form-input.has-success input:valid  {
+    border-bottom: 1px solid #3c763d !important;
+}
+
+
+
+.form-input .alert-danger {
+    position: absolute;
+    top: 28px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    padding: 2px 5px;
+}
+.form-input.has-danger input:invalid  {
+    border-bottom: 1px solid lightgrey !important;
+}
+ .form-input.has-danger input:valid  {
+    border-bottom: 1px solid #a94442 !important;
+}
+
+
+
+.form-input.has-success i {
+    /* opacity:0; */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

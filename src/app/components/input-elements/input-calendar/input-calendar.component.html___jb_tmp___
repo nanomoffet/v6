@@ -1,0 +1,9 @@
+<label *ngIf="!edit" [for]="for">{{name}}</label>
+<input *ngIf="edit" [(ngModel)]="name" type="text" class="input-label">
+<input mdInput [id]="id" [name]="id" [type]="type" [value]="value" [mdDatepicker]="picker" placeholder="mm/dd/yyyy"/>
+<!--<button mdSuffix [md-datepicker-toggle]="picker"></button>-->
+<md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+<div class="col-12 text-center">
+    <md-datepicker touchUi="true" #picker></md-datepicker>
+   <!--<ba-datepicker></ba-datepicker>-->
+</div>

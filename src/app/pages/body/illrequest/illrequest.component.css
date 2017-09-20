@@ -1,0 +1,573 @@
+
+/* 
+This is for the elements inside the array box.
+*/
+
+.description-block {
+  width:100%;
+  padding:25px;
+}
+.description-block h6 {
+  padding-bottom:15px;
+}
+
+
+/* 
+Breadcrumb Box
+*/
+.dropdown-container {
+    display: inline-block;
+    width: 100%;
+    padding: 3px 10px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size:1.15em;
+    color:grey;
+}
+.bread-home {
+    display: inline-block;
+    cursor:pointer;
+}
+.bread-home i {
+    font-size:1.25em;
+    padding:5px;
+}
+.bread-home:hover i, .bread-home:focus i {
+    color:#3f51b5;
+}
+.bread-crumb-tier {
+    display: inline-block;
+    color:lightgrey;
+    font-size:1.15em;
+    padding:5px;
+}
+.bread-crumb {
+    display: inline-block;
+    color:grey;
+    padding:5px;
+}
+.bread-crumb:hover, .bread-crumb:focus {
+    color:#3f51b5;
+    cursor:pointer;
+}
+.bread-crumb i {
+    color:#aaa;   
+}
+.bread-crumb:hover i, .bread-crumb:focus i {
+    color:#3f51b5;
+}
+.bread-crumb-trail {
+    display: inline-block;
+    color:#454545;
+    padding:5px;
+}
+.bread-crumb-trail i {
+    color:grey;
+    padding:5px;
+}
+
+
+
+
+
+.edit-form {
+  margin-top:2px;
+}
+
+.mat-tab-body-content h1 {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.mat-tab-label {
+  width:32% !important;
+    color: #454545;
+    opacity: 0.9;
+}
+
+
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+.form-panel {
+  padding: 0px 0px 10px 10px;
+  /*
+  margin: 10px 15px;
+  */
+  clear:both;
+}
+.form-panel label {
+    float: left;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align:left;
+    margin-bottom: 0px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:5px;
+}
+
+.form-panel label {
+  font-size:1em;
+}
+.form-panel .select-menu select{
+    padding: 10px;
+    max-height: 50px;
+    margin-top: 2px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+.form-panel input[type=text], .form-panel input[type=password], .form-panel input[type=number] {
+    padding: 7px 5px;
+    max-height: 50px;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: calc(100% - 60px);
+    /*
+    border:1px solid transparent;
+    border-bottom:1px solid grey;
+    */
+}
+.form-panel input.fourth[type=text], .form-panel input.fourth[type=password], .form-panel input.fourth[type=number] {
+    padding: 7px 5px;
+    max-height: 50px;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: calc(100% - 60px);
+    /*
+    border:1px solid transparent;
+    border-bottom:1px solid grey;
+    */
+    width:26%;
+}
+.form-panel textarea {
+    width: calc(100% - 20px);
+}
+.form-panel.form-checkbox {
+    clear: both;
+    /*
+    padding: 5px;
+    */
+    display: flex;
+    position: relative;
+}
+.form-checkbox label {
+  width: 45% !important;
+}
+.form-checkbox input {
+  width: 45% !important;
+}
+.form-checkbox md-checkbox label {
+  padding-top:5px;
+  padding-left:15px;
+}
+.form-checkbox input[type=checkbox],.form-checkbox input[type=radio] {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:5px;
+}
+
+
+
+.drake {
+    padding: 0px 0px 15px 0px;
+    box-shadow: 0px 2px 3px lightgrey;
+    margin: 10px 15px;
+    display:flex;
+    clear:both;
+}
+
+.drake .edit-panel {
+  color:lightgrey;
+  background:#efefef;
+}
+
+.drake label {
+    float: left;
+    width: 45%;
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align:right;
+    margin-bottom: 0px;
+    padding-right:10px;
+    padding-top:10px;
+}
+
+.drake .fourth {  
+    float: right;
+}
+  
+
+.drake label.fourth {
+    float: left;
+    padding: 15x 10px 0px 10px;
+    width: 41%;
+    display: block;
+    line-height: 1.25em;
+}
+
+.drake.drake-calendar{
+  display:block;
+}
+.drake .el-panel.drake-checkbox label {
+  padding-left:15px;
+  padding-top:10px;
+  width:45%;
+}
+.drake md-checkbox label {
+  padding-top:5px !important;
+}
+.drake .drake-calendar label {
+  width:45%;
+}
+input-calendar input {
+  width:43% !important;
+}
+.drake-calendar input-calendar input.mat-input-element {
+  width:40% !important;
+  border: 1px solid grey;
+}
+
+.center-calendar {
+  padding:15px;
+  background: #fafafa;
+}
+
+.drake textarea {
+  width:50%;
+  margin-left:10px;
+  margin-right:10px;
+  text-indent:10px;
+}
+
+
+
+.drake input[type=text], .drake input[type=password], .drake input[type=number] {
+    padding:7px 5px;
+    max-height: 50px;
+    margin-left:10px;
+    margin-right:10px;
+    width: 50%;
+}
+.drake input[type=checkbox] {
+    width:30px;
+    height:30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+.drake input.input-label {
+  border:1px solid transparent;
+  border-bottom: 1px solid grey;
+  width:43%;
+  text-align:right;
+  margin-right:0px;
+  padding-right:10px;
+  vertical-align: top;
+  float:left;
+}
+
+
+.drake-select {
+  width:100%;
+}
+.select-menu select {
+  padding: 10px 5px;
+  max-height: 50px;
+  margin-top: 2px;
+  margin-left:10px;
+  margin-right:10px;
+  width: 50%;
+}
+
+.drake > .fourth {
+    padding-right:3%;
+    float:initial;
+}
+
+.drake input.fourth {
+    float: right;
+    width: 14%;
+    max-height: 50px;
+    margin-left:8px;
+    margin-right:11px;
+    display: block;
+    margin-top: 0px;
+}
+
+
+.drake .edit-panel input {
+    padding:2px;
+    margin: 2px 0px;
+    border-radius:4px;
+    border: 1px solid lightgrey;
+    width:initial;
+    text-align: center;
+    color: #999;
+    font-weight: bold;
+}
+  .drake .edit-panel input[type=number] {
+    text-indent: 15px;
+    width:75px;
+    text-align: center;
+    color: #999;
+    font-weight: bold;
+}
+
+.drake .el-panel label {
+  font-size:1em;
+}
+
+.el-panel {
+  width:100%;
+  display:flex;
+  padding:5px;
+}
+.edit-panel {
+  width:100%;
+}
+
+
+
+
+
+.up-link, .down-link {
+  padding:5px 15px;
+}
+
+.move-link {
+  padding:4px 10px;
+  float:right;
+  cursor: pointer;
+}
+.move-link:hover, .move-link:focus {
+  color:grey !important;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .form-panel label {
+      width: 45%;
+      text-align:right;
+    } 
+    .form-panel input[type=text], .form-panel input[type=password], .form-panel input[type=number] {
+      width:50%;
+      text-align:left;
+    } 
+
+    .drake {
+      display:block;
+    }
+    .el-panel {
+      width:100%;   
+    }
+    .edit-panel {
+      width:100%;
+      text-align: left;     
+    }
+       
+}
+
+
+
+@media screen and (max-width: 575px) {
+    .form-panel label {
+      width: 100%;
+      text-align:left;
+    } 
+    .form-panel input[type=text], .form-panel input[type=password], .form-panel input[type=number] {
+      width: calc(100% - 20px);
+      text-align:left;
+    } 
+    .drake label {
+        float: left;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.2em;
+        text-align: left;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .el-panel input[type=text], .el-panel input[type=password], .drake input[type=number] {
+        width: calc(100% - 60px);
+    }
+    .el-panel label.fourth {
+        float: left;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .el-panel input.fourth {
+        float: left;
+        width: calc(32% - 20px);
+        max-height: 50px;
+        margin-left:10px;
+        margin-right:initial;
+        display: block;
+        margin-top: 0px;
+    }
+    .drake .drake-calendar label {
+        width: 100%;
+      }
+    input-calendar input {
+        width: calc(100% - 80px) !important;
+        border: 1px solid grey;
+    }
+    .select-menu select {
+        width: calc(100% - 20px);
+    }
+    .drake .el-panel.drake-checkbox label {
+        width: calc(100% - 78px);
+    }
+    .drake .el-panel.drake-checkbox input {
+        margin-top:7px;
+    }
+    .drake-textarea textarea{
+        width:calc(100% - 20px);
+    }
+    .drake input.input-label {
+        text-align: left;
+        margin-bottom: 10px;
+        width: calc(100% - 60px);
+    }
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+    #illform .mat-tab-label {
+      font-size: 0.85em;
+      padding:0px;
+  }
+
+}
+
+@media screen and (min-width: 576px) {
+
+  .form-panel input.fourth[type=text], .form-panel input.fourth[type=password], .form-panel input.fourth[type=number] {
+      /*
+      border:1px solid transparent;
+      border-bottom:1px solid grey;
+      */
+      width:15%;
+  }
+    .form-panel textarea {
+      width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+    .form-panel label {
+      width: 45%;
+      text-align:right;
+    } 
+    .form-panel input[type=text], .form-panel input[type=password], .form-panel input[type=number] {
+      width:50%;
+      text-align:left;
+    } 
+
+    .drake {
+        padding: 0px;
+    }
+    .move-link {
+        float:none;
+        clear:both;
+        width:100%;
+        display:block;
+        text-align: center;
+        padding:0px;
+    }
+    .el-panel {
+      width:calc(100% - 100px);   
+    }
+    .edit-panel {
+      width:100px;
+      text-align: center;     
+    }
+    .edit-panel input {
+      height:25px;
+    }
+    .drake input.fourth {
+      width: 15%;
+      max-height: 50px;
+      margin-left:10px;
+      margin-right:4px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .drake input.fourth {
+      width: 15%;
+      max-height: 50px;
+      margin-left:11px;
+      margin-right:11px;
+    }
+
+}
+@media screen and (min-width: 1200px) {
+  .drake input.fourth {
+    width: 15%;
+    max-height: 50px;
+    margin-left:9px;
+    margin-right:20px;
+  }
+
+}
+
+
+
+
+
+.order-input {
+  padding:2px !important;
+  border-radius:4px;
+  border: 1px solid lightgrey;
+}
+
+.desc-list {
+  list-style:none;
+}
+
+
+label.mat-button-toggle-label {
+  margin-bottom:0px;
+  font-size:0.85em;
+}
+
+
+
+
+

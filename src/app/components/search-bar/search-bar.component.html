@@ -1,0 +1,38 @@
+<!--
+<div class="search-bar" class="row">
+	<div class="col col-md-4">
+		<app-search-indexes></app-search-indexes>
+		<app-search-targets></app-search-targets>
+	</div>	
+	<div class="col col-md-8">		
+		<input #searchInput class="searchInput" type="text" (keyup.enter)="search(searchInput.value)" placeholder="Search for..">
+		<span class="glyphicon glyphicon-search" (click)="search(searchInput.value)"></span>
+	</div>
+</div>
+-->
+
+
+<div id="navbar">
+		<div class="nav-left">
+			<div class="nav-search-index">
+					<app-search-indexes></app-search-indexes> 
+				<!--	<select>
+						<option>For All Headings and makings of the street.</option>
+					</select>-->
+			</div>
+			<div class="nav-search-resources"> 
+				<!--	<app-search-targets></app-search-targets>   -->
+				<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+				
+			</div>	
+		</div>
+		<div class="nav-right">
+			<div class="nav-search-submit">
+				<button type="submit" class="nav-input-btn" tabindex="20" (click)="search(searchInput.value)"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="nav-fill">
+			<input #searchInput class="searchInput" type="text" (keyup.enter)="search(searchInput.value)" placeholder="Search for..">
+			<span class="glyphicon glyphicon-search" (click)="search(searchInput.value)"></span>
+		</div>
+</div>

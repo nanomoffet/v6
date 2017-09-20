@@ -1,0 +1,31 @@
+<div class="facet-filter">              
+    <h4 class="facet-header clearfix d-none d-lg-block">Filters</h4>
+    <h4 class="facet-header clearfix d-block d-lg-none">Filter Options</h4>
+    <div class="mob-search-selects d-block d-lg-none"> 
+        <!-- Search Facets -->
+        <select>
+            <option>24 per page</option>
+            <option>48 per page</option>
+            <option>72 per page</option>
+            <option>96 per page</option>
+        </select>
+        <select>
+            <option>sort by Feature</option>
+            <option>sort by Cluster</option>
+            <option>sort by Merge</option>
+        </select>
+    </div>
+
+
+    <!-- <Topic-Search class="" [TopicSearch]="ActiveFacets" [rowClass]="false"></Topic-Search> -->
+    <search-active-facets [ActiveFacet]="ActiveFacets"></search-active-facets>
+
+
+    <div class="container">
+        <div class="Facets row">
+            <div *ngFor="let facet of facets" class="FacetSearch col-12 col-sm-6 col-md-4 col-lg-12">
+                    <search-facet  [id]="facet.id" [FacetSearch]="facet"></search-facet> 
+            </div> 
+        </div> 
+    </div>
+</div>

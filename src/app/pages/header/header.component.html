@@ -1,0 +1,147 @@
+	<div id="header" [ngClass]="{'headroom': true, 'header-show': dirUp, 'header-hide': !dirUp }" (scroll)="onScrollEvent($event)" >
+		<!-- Mobile -->
+		<div class="d-flex d-md-none">
+			<div class="col-3 search-icon" (click)="openSearchOverlay()">
+				<i class="fa fa-2x fa-search" aria-hidden="true"></i>
+			</div>
+			<div class="col-6 text-center" style="padding:5px; vertical-align:middle;">
+				<app-link class="logo" [imageUrl]="'assets/images/SHAREit-logo-small.jpg'" [link]="'/#/body/home/slide'"></app-link>
+			</div>
+			<div class="col-3 ham-menu">
+				<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+			</div>
+		</div>
+
+		<!-- Tablet -->
+		<div class="d-none d-md-block d-lg-none">
+			<app-link class="logo" [imageUrl]="'assets/images/SHAREit-logo-small.jpg'" [link]="'/#/body/home/slide'" style="max-width:50px;"></app-link>
+			<div class="notify-icons">
+				<!-- notify
+				<div class="icon-badge">
+					<i class="fa fa-bell" aria-hidden="true"></i>
+					<span class="badge badge-pill badge-default">1</span>
+				</div>
+			-->
+				<icon-popover
+					[id] = "notify2"
+					[icon] = "'fa fa-bell-o'"
+					[badgeNumber] = "'8'"				
+					[popOverTitle] = "'Notifications'"
+					[popOverContent] = "notifications"						
+					>
+				</icon-popover>
+				<icon-quickmenu
+					[id] = "quickmenu2"
+					[icon] = "'fa fa-heart'"
+					[badgeNumber] = "'+99'"				
+					[popOverTitle] = "'QuickMenu'"
+					[popOverContent] = "notifications2"						
+					>
+				</icon-quickmenu>
+				<icon-popover
+					[id] = "myList2"
+					[icon] = "'fa fa-list-alt'"
+					[badgeNumber] = "'25'"				
+					[popOverTitle] = "'My List'"
+					[popOverContent] = "notifications2"					
+					>
+				</icon-popover>
+				
+			</div>
+			
+			<div class="search-icon-input" (click)="openSearchOverlay()">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				Type anywhere to <span class="bold">search</span>
+			</div> 
+			<!-- Search-Overlay Icon 		
+				<search-overlay></search-overlay>	
+			-->	
+
+			<div class="user-info pull-right">
+				<span class="user-name">Jeanne d'Arc</span>
+				<img src="assets/images/page2_pic3.jpg" />		
+			</div>
+		</div>
+
+		<!-- Desktop -->
+		<div #desktophead >
+			<div  class="row d-none d-lg-flex">
+				<div class="col-lg-3">
+					<app-link class="logo" [imageUrl]="'assets/images/SHAREit-logo-small.jpg'" [link]="'/#/body/home/slide'"></app-link>
+					<!-- <img class="logo" src="assets/images/rmpl_logo2.jpg" />
+					<div class="logo-title">Rancho Mirage Public Library</div>-->
+				</div>
+				<div class="col-lg-7">
+					<app-search-bar></app-search-bar>
+				</div>
+				<div class="col-lg-2 notify-icons text-lg-right">			
+					<icon-popover
+						[id] = "notify"
+						[icon] = "'fa fa-bell-o'"
+						[badgeNumber] = "'8'"				
+						[popOverTitle] = "'Notifications'"
+						[popOverContent] = "notifications"						
+						>
+					</icon-popover>
+					<icon-quickmenu
+						[id] = "quickmenu"
+						[icon] = "'fa fa-heart'"
+						[badgeNumber] = "'+99'"				
+						[popOverTitle] = "'QuickMenu'"
+						[popOverContent] = "notifications2"						
+						>
+					</icon-quickmenu>
+					<icon-popover
+						[id] = "myList"
+						[icon] = "'fa fa-list-alt'"
+						[badgeNumber] = "'25'"				
+						[popOverTitle] = "'My List'"
+						[popOverContent] = "notifications2"					
+						>
+					</icon-popover>
+					
+				
+				</div>
+			</div>
+			<div class="row d-none d-lg-flex">
+				<div class="header-links col-lg-6">
+					<span>
+						<a href="#/body/illrequest" class="header-link">ILL Request</a>
+					</span>
+					<span>
+						<a href="#/body/placehold" class="header-link">Databases</a>
+					</span>
+					<span>
+						<a href="#/body/record" class="header-link">Suggest a Title</a>
+					</span>
+					<!--<span>
+						<a href="" class="header-link">Events</a>
+					</span>-->
+					<span>
+						<a href="#/body/login" class="header-link">Sign Up</a>
+					</span>					
+				</div>
+				<div class="header-options col-lg-6">
+					<a class="stacked-text" href="#/body/account">
+						<span class="stacked-top">Hello, Sign In</span>
+						<span class="stacked-bottom">Your Account <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+					</a>
+					<a class="non-stacked-text" href="#/body/template2">
+						<span class="single-row">Items Out</span>
+					</a>			
+					<a class="non-stacked-text" href="#/body/home/wiggle">
+						<span class="single-row">My List</span>
+					</a>
+					<div class="non-stacked-text">
+						<span class="single-row">Settings <i class="fa fa-cog" aria-hidden="true"></i></span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+<!-- mobile -> tablet search overlay -->
+<search-overlay></search-overlay>	
+<!-- Back to Top -->
+<top-page></top-page>

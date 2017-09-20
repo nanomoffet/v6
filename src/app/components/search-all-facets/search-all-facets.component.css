@@ -1,0 +1,95 @@
+
+search-filter {
+    display:inline-block;
+}
+
+.Facets {
+    border-top: 2px solid #f7f7f7;
+}
+.facet-filter {
+    width:100%;
+}
+.facet-filter > div i {
+    font-size:0.75em;
+}
+.facet-filter h5 {
+    display: block;
+    width:100%;
+    padding: 10px 25px;
+}
+.facet-filter h6 {
+    color:#797979;
+    padding:5px;
+    cursor:pointer;
+}
+.facet-filter div.open {
+    box-shadow: 0px 2px 3px lightgrey;
+}
+
+.facet-filter div.open h6 {
+    color:#454545;
+    border-bottom: 1px dotted #797979;
+}
+.facet-list {
+    list-style: none;
+    padding: 0px 10px;
+    display:none;
+    font-size:0.85em;  
+}
+.facet-header {
+    text-indent:25px;
+    padding:9px 10px;
+    margin-top:25px;
+    border-bottom: 2px solid #f7f7f7;
+}
+.mob-search-selects {
+    text-align:center;
+    padding:5px;
+}
+.mob-search-selects select {
+    padding:7px 5px;
+}
+div.open .facet-list {
+    max-height: 200px;
+    overflow:auto;
+    display:block;
+}
+.facet-list li {
+    width:100%; 
+}
+.facet-list input[type=checkbox], .facet-list input[type=radio]  {
+    width:20px;
+    height:20px;
+    margin-right:10px;
+}
+.facet-list label {
+    vertical-align: top;
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+.facet-list label:hover, .facet-list label:focus {
+    text-decoration:underline;
+    cursor:pointer;
+}
+@media screen and (max-width: 575px) {
+    .facet-filter div, .facet-filter search-facet {
+        min-width:100%;
+    }
+    .facet-filter h6 {
+        text-indent:15px;
+        font-size:1.75em;
+    }
+    .facet-list li {
+        width: 100%;
+        font-size:1.75em;
+    }
+}
+@media screen and (min-width: 992px) {
+    .facet-filter {
+        max-width:200px;
+    }
+    .FacetSearch {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

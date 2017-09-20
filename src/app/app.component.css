@@ -1,0 +1,31 @@
+.main {
+	display:block;
+	padding:0px;
+	
+}
+
+.header {
+	background:none !important;
+	z-index:900;
+}
+.footer {
+	width:100%;
+	padding:0px;
+}
+header {
+	height:75px;	
+}
+
+
+
+@media screen and (min-width: 768px) {
+	.main {
+		display:block;
+		padding:0 50px;		
+	}
+}
+@media screen and (min-width: 992px) {
+	header {
+		height:95px;	
+	}
+}

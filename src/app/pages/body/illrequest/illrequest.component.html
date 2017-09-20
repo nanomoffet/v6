@@ -1,0 +1,336 @@
+<!-- Breadcrumb -->
+<div class="dropdown-container" >
+    <span class="bread-home"><i class="fa fa-home" aria-hidden="true"></i></span>
+    <span class="bread-crumb-tier"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+    <span class="bread-crumb-trail"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> ILL Request Form</span>
+    <span class="edit-form pull-right"><md-button-toggle (click)="editform()">Edit Form</md-button-toggle></span>
+</div>
+<br />
+<br />
+
+<!-- SUBMIT FORM -->
+<div class="container-fluid" style="max-width:1200px;" *ngIf="!editfields">
+<div class="row">
+        <div class="col-12">
+            <md-tab-group>
+            <md-tab label="Returnable (loan)">
+                <h1>Returnable (loan)</h1>
+                <div *ngFor="let rList of ILLData.Returnable; let i=index" [ngSwitch]="rList.type">
+                    <!-- Go Through the different type of Input Elements -->
+                    <div *ngSwitchCase="'SingleInput'" class="form-panel"> <!-- SingleInput component -->
+                        <input-single *ngFor="let rValues of rList.values" [for]="rValues.idFor" [(name)]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single> 
+                    </div>
+                    <div *ngSwitchCase="'TripleInput'" class="form-panel fourth" >
+                        <input-triple *ngFor="let rValues of rList.values" [for]="rValues.idFor" [name]="rValues.label" [id1]="rValues.idFor1" [value1]="rValues.value1" [type1]="'text'" [id2]="rValues.idFor2" [value2]="rValues.value2" [type2]="'text'" [id3]="rValues.idFor3" [value3]="rValues.value3" [type3]="'text'"></input-triple> 
+                    </div>
+                    <div *ngSwitchCase="'TextAreaInput'" class="form-panel drake-textarea" >
+                        <input-textarea *ngFor="let rValues of rList.values" [name]="rValues.label"  [rows]="'4'" [id]="rValues.idFor" [placeholder]="rValues.placeholder"></input-textarea>
+                    </div>
+                    <div *ngSwitchCase="'CalendarInput'" class="form-panel drake-calendar" >
+                        <input-calendar *ngFor="let rValues of rList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]=" " [type]="date"></input-calendar>
+                    </div>
+                    <div *ngSwitchCase="'SelectInput'" class="form-panel">                         
+                        <input-select [SelectDropdown]="rList.values"></input-select>
+                    </div>
+                    <div *ngSwitchCase="'CheckboxInput'" class="form-panel form-checkbox">
+                        <input-checkbox *ngFor="let rValues of rList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value"></input-checkbox> 
+                    </div>
+                    <div *ngSwitchCase="'CurrencyInput'" class="form-panel">
+                        <input-single *ngFor="let rValues of rList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'number'"></input-single> 
+                    </div>                           
+                    <div *ngSwitchDefault> <!-- SingleInput component -->
+                    </div>
+                </div>
+                <br /><br />
+                <div class="col-12 text-right">
+                    <button class="btn btn-primary" (click)="submitRequest()">{{SubmitRequest}}</button>
+                    <button class="btn btn-link">{{ClearRequest}}</button>
+                </div>
+            </md-tab>
+            <md-tab label="Non-Returnable (copy)">
+                <h1>Non-Returnable (copy)</h1>
+                <div *ngFor="let nrList of ILLData.NonReturnable" [ngSwitch]="nrList.type">
+                        <!-- Go Through the different type of Input Elements -->
+                        <div *ngSwitchCase="'SingleInput'" class="form-panel">
+                        <input-single *ngFor="let rValues of nrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single> 
+                    </div>   
+                    <div *ngSwitchCase="'TripleInput'" class="form-panel fourth" >
+                        <input-triple *ngFor="let rValues of nrList.values" [for]="rValues.idFor" [name]="rValues.label" [id1]="rValues.idFor1" [value1]="rValues.value1" [type1]="'text'" [id2]="rValues.idFor2" [value2]="rValues.value2" [type2]="'text'" [id3]="rValues.idFor3" [value3]="rValues.value3" [type3]="'text'"></input-triple> 
+                    </div>
+                    <div *ngSwitchCase="'TextAreaInput'" class="form-panel" >
+                        <input-textarea *ngFor="let rValues of nrList.values" [name]="rValues.label"  [rows]="'4'" [id]="rValues.idFor" [placeholder]="rValues.placeholder"></input-textarea>
+                    </div>
+                    <div *ngSwitchCase="'CalendarInput'" class="form-panel" >
+                        <input-calendar *ngFor="let rValues of nrList.values" [for]="rValues.idFor" [name]="rValues.label"[id]="rValues.idFor" [value]=" " [type]="'text'"></input-calendar>
+                    </div>
+                    <div *ngSwitchCase="'SelectInput'" class="form-panel">                         
+                        <input-select [SelectDropdown]="nrList.values"></input-select>
+                    </div>
+                    <div *ngSwitchCase="'CheckboxInput'" class="form-panel form-checkbox">
+                        <input-checkbox *ngFor="let rValues of nrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value"></input-checkbox> 
+                    </div>
+                    <div *ngSwitchCase="'CurrencyInput'" class="form-panel">
+                        <input-single *ngFor="let rValues of nrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'number'"></input-single> 
+                    </div>     
+                    <div *ngSwitchDefault class="form-panel" >
+                    </div>   
+                </div>
+                <br /><br />
+                <div class="col-12 text-right">
+                    <button class="btn btn-primary" (click)="submitRequest()">{{SubmitRequest}}</button>
+                    <button class="btn btn-link">{{ClearRequest}}</button>
+                </div>
+            </md-tab>
+            <!-- Reference Request AFTER Demo
+            <md-tab label="Reference Request">
+                <h1>Reference Request</h1>
+                <div *ngFor="let rrList of ILLData.ReferenceRequest" [ngSwitch]="rrList.type">
+                    <div *ngSwitchCase="'SingleInput'" class="form-panel" >
+                        <input-single *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single> 
+                    </div>
+                    <div *ngSwitchCase="'TripleInput'" class="form-panel fourth" >
+                        <input-triple *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id1]="rValues.idFor1" [value1]="rValues.value1" [type1]="'text'" [id2]="rValues.idFor2" [value2]="rValues.value2" [type2]="'text'" [id3]="rValues.idFor3" [value3]="rValues.value3" [type3]="'text'"></input-triple> 
+                    </div>
+                    <div *ngSwitchCase="'TextAreaInput'" class="form-panel" >
+                        <input-textarea *ngFor="let rValues of rrList.values" [name]="rValues.label"  [rows]="'4'" [id]="rValues.idFor" [placeholder]="rValues.placeholder"></input-textarea>
+                    </div>
+                    <div *ngSwitchCase="'CalendarInput'" class="form-panel" >
+                        <input-calendar *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label"[id]="rValues.idFor" [value]=" " [type]="'text'"></input-calendar>
+                    </div>
+                    <div *ngSwitchCase="'SelectInput'" class="form-panel">                         
+                        <input-select [SelectDropdown]="rrList.values"></input-select>
+                    </div>
+                    <div *ngSwitchCase="'CheckboxInput'" class="form-panel form-checkbox">
+                        <input-checkbox *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value"></input-checkbox> 
+                    </div>
+                    <div *ngSwitchCase="'CurrencyInput'" class="form-panel">
+                        <input-single *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'number'"></input-single> 
+                    </div>     
+                    <div *ngSwitchDefault class="form-panel" > 
+                    </div>
+                </div>
+                <br /><br />
+                <div class="col-12 text-right">
+                    <button class="btn btn-primary" (click)="submitRequest()">{{SubmitRequest}}</button>
+                    <button class="btn btn-link">{{ClearRequest}}</button>
+                </div>
+            </md-tab>
+            -->
+            </md-tab-group>
+
+            <br />
+            <div class="container-fluid" *ngIf="FormResults">
+                <div class="row">                    
+                    <div class="col-12">
+                        <br /><br />
+                        <ba-alert [alertDismissible]="true" [alertType]="'success'" [alertMessage]="'Thank you for Submitting the Ill Request form. Depending on the Response of this request we will follow up with a detailed report from the lender.'"></ba-alert>
+                    </div>  
+                </div>
+            </div>
+            <br /><br />
+
+        </div>
+</div>
+</div>
+<!-- END - SUBMIT FORM -->
+
+
+<!-- EDIT FORM -->
+
+<form id="illform" [formGroup]="customerForm">
+
+<div class="container-fluid" style="max-width:1200px;" *ngIf="editfields">
+    <div class="row">
+        <div class="col-12">
+            <md-tab-group>
+            <md-tab label="Returnable (loan)">
+                <h1>Returnable (loan)</h1>
+                <div id="return-loan" class='containers' [dragula]='"returnable-bag"' [dragulaModel]='ILLData.Returnable'>
+                    <div class="drake" *ngFor="let rList of ILLData.Returnable; let i=index" [attr.data-index]="i" [ngSwitch]="rList.type">
+                        <div class="edit-panel">
+                            <a class="move-link d-none d-md-inline-block" (click)="MoveAfter(i)"><i class="fa fa-arrows-v" aria-hidden="true"></i> Order</a>
+                            <a class="up-link d-inline-block d-md-none"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                            <input [id]="'rl' + rList.order" [formControlName]="'rl' + rList.order" class="order-input" type="number" size="3" [(value)]="rList.order" (keyup.enter)="setInput('rl' + rList.order)" >                          
+                            <a class="down-link d-inline-block d-md-none"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                        </div>
+                         <!-- Go Through the different type of Input Elements -->    
+                                           
+                         <div *ngSwitchCase="'SingleInput'"  class="el-panel">    
+                            <!-- <input-single  *ngFor="let rValues of rList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single>  -->               
+                            <div class="label-input-width" *ngFor="let rValues of rList.values">
+                                <!--<label [for]="rValues.idFor">{{rValues.label}}</label>-->
+                                <input type="text" class="input-label" [id]="rValues.idLabel" [name]="rValues.label" [value]="rValues.label" [formControlName]="rValues.idLabel">
+                                <input [id]="rValues.idFor" [name]="rValues.label" [value]="rValues.value" type="text" [formControlName]="rValues.idFor" />  
+                            </div>
+
+                        </div>
+                        <div *ngSwitchCase="'TripleInput'" class="el-panel fourth" >
+                            <!--<input-triple *ngFor="let rValues of rList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id1]="rValues.idFor1" [value1]="rValues.value1" [type1]="'text'" [id2]="rValues.idFor2" [value2]="rValues.value2" [type2]="'text'" [id3]="rValues.idFor3" [value3]="rValues.value3" [type3]="'text'"></input-triple> -->   
+                            <div class="label-input-width" *ngFor="let rValues of rList.values">
+                                <input type="text" class="input-label" [id]="rValues.idLabel" [name]="rValues.label" [value]="rValues.label" [formControlName]="rValues.idLabel">
+                                <input class="fourth" [id]="rValues.idFor1" [value]="rValues.value1" type="text" [formControlName]="rValues.idFor1" />
+                                <input class="fourth" [id]="rValues.idFor2" [value]="rValues.value2" type="text" [formControlName]="rValues.idFor2" /> 
+                                <input class="fourth" [id]="rValues.idFor3" [value]="rValues.value3" type="text" [formControlName]="rValues.idFor3" /> 
+                            </div> 
+                        </div>
+                        <div *ngSwitchCase="'TextAreaInput'" class="el-panel drake-textarea" >
+                            <!-- <input-textarea *ngFor="let rValues of rList.values" [edit]="true" [name]="rValues.label"  [rows]="'4'" [id]="rValues.idFor" [placeholder]="rValues.placeholder"></input-textarea> -->
+                            <div class="label-input-width" *ngFor="let rValues of rList.values">
+                                <input type="text" class="input-label" [id]="rValues.idLabel" [name]="rValues.label" [value]="rValues.label" [formControlName]="rValues.idLabel">
+                                <textarea [id]="rValues.idFor" [name]="rValues.label" [placeholder]="rValues.placeholder" [formControlName]="rValues.idFor" rows="4"></textarea> 
+                            </div>
+                        </div>
+                        <div *ngSwitchCase="'CalendarInput'" class="el-panel drake-calendar" >
+                            <input-calendar *ngFor="let rValues of rList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="" [type]="'text'"></input-calendar>
+                            <!-- <div class="label-input-width" *ngFor="let rValues of rList.values">
+                                    <input type="text" class="input-label" [id]="rValues.idLabel" [name]="rValues.label" [value]="rValues.label" [formControlName]="rValues.idLabel" />
+                                    <input mdInput [mdDatepicker]="picker" [id]="rValues.idFor" [name]="rValues.label" type="text" value="" placeholder="mm/dd/yyyy" /> 
+                            </div> -->
+                        </div>
+                        <div *ngSwitchCase="'SelectInput'" class="el-panel">                         
+                            <input-select [edit]="true" [SelectDropdown]="rList.values"></input-select> 
+                            <!-- <div class="select-menu" *ngFor="let slist of SelectDropdown">
+                                <input type="text" class="input-label">
+                                <select [id]="slist.idFor" [name]="slist.idFor">
+                                      <option *ngFor="let sOptions of slist.options" [value]="sOptions.value" [selected]="sOptions.selected">
+                                          {{sOptions.name}}
+                                      </option>
+                                </select>
+                              </div>
+                            -->
+                        </div>
+                        <div *ngSwitchCase="'CheckboxInput'" class="el-panel drake-checkbox">
+                            <input-checkbox *ngFor="let rValues of rList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value"></input-checkbox> 
+                        </div>
+                        <div *ngSwitchCase="'CurrencyInput'" class="el-panel">
+                            <input-single *ngFor="let rValues of rList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'number'"></input-single> 
+                        </div>     
+                        <div *ngSwitchDefault class="el-panel" > 
+                            <!-- What kind of way cat we catch corrrupted JSON formats. -->
+                        </div>
+                    </div>
+                </div>
+            <!--
+                    <div class="row">
+                        <div class="col-6">
+                            <h6>this.Returnable.data Object</h6>
+                            <ul class="desc-list">
+                                <li *ngFor="let rList of ILLData.Returnable">{{rList.order}} : <span *ngFor="let rValues of rList.values">{{rValues.label}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-5">
+                            <h6>Observations:</h6>
+                            <ul>
+                                <li>In normalizing the object "order" any changes to the drop will reformat to the legnth of the list. </li>
+                                <li>HTML makes a copy of the object array, so events ( drag, input, incremental ) will need functionality to change this.Returnable.data Object. </li>
+                                <li>Validation should be in the input element components itself to make this re-usable. The page form </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            -->
+            </md-tab>
+            <md-tab label="Non-Returnable (copy)">
+                <h1>Non-Returnable (copy)</h1>
+                <div class='containers' [dragula]='"nonreturnable-bag"' [dragulaModel]='ILLData.NonReturnable'>
+                    <div class="drake" *ngFor="let nrList of ILLData.NonReturnable" [ngSwitch]="nrList.type">
+                        <div class="edit-panel">
+                            <a class="move-link d-none d-md-inline-block"><i class="fa fa-arrows-v" aria-hidden="true"></i> Order</a>
+                            <a class="up-link d-inline-block d-md-none"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                            <input class="order-input" type="text" size="3" [value]="nrList.order" >                          
+                            <a class="down-link d-inline-block d-md-none"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                        </div>
+                         <!-- Go Through the different type of Input Elements -->
+                         <div *ngSwitchCase="'SingleInput'" class="el-panel">
+                            <input-single *ngFor="let rValues of nrList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single> 
+                        </div>   
+                        <div *ngSwitchCase="'TripleInput'" class="el-panel fourth" >
+                            <input-triple *ngFor="let rValues of nrList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id1]="rValues.idFor1" [value1]="rValues.value1" [type1]="'text'" [id2]="rValues.idFor2" [value2]="rValues.value2" [type2]="'text'" [id3]="rValues.idFor3" [value3]="rValues.value3" [type3]="'text'"></input-triple> 
+                        </div>
+                        <div *ngSwitchCase="'TextAreaInput'" class="el-panel drake-textarea" >
+                            <input-textarea *ngFor="let rValues of nrList.values" [edit]="true" [name]="rValues.label"  [rows]="'4'" [id]="rValues.idFor" [placeholder]="rValues.placeholder"></input-textarea>
+                        </div>
+                        <div *ngSwitchCase="'CalendarInput'" class="el-panel drake-calendar" >
+                            <input-calendar *ngFor="let rValues of nrList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label"[id]="rValues.idFor" [value]="" [type]="'text'"></input-calendar>
+                        </div>
+                        <div *ngSwitchCase="'SelectInput'" class="el-panel">                         
+                            <input-select [SelectDropdown]="nrList.values" [edit]="true"></input-select>
+                        </div>
+                        <div *ngSwitchCase="'CheckboxInput'" class="el-panel drake-checkbox">
+                            <input-checkbox *ngFor="let rValues of nrList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value"></input-checkbox> 
+                        </div>
+                        <div *ngSwitchCase="'CurrencyInput'" class="el-panel">
+                            <input-single *ngFor="let rValues of nrList.values" [edit]="true" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'number'"></input-single> 
+                        </div>     
+                        <div *ngSwitchDefault class="el-panel" >
+                        </div>   
+                    </div>
+                </div>
+            </md-tab>
+            <!--
+            <md-tab label="Reference Request">
+                <h1>Reference Request</h1>
+                <div class='containers' [dragula]='"refRequest-bag"' [dragulaModel]='ILLData.ReferenceRequest'>
+                    <div class="drake" *ngFor="let rrList of ILLData.ReferenceRequest" [ngSwitch]="rrList.type">
+                        <div class="edit-panel">
+                            <a class="move-link d-none d-md-inline-block"><i class="fa fa-arrows-v" aria-hidden="true"></i> Order</a>
+                            <a class="up-link d-inline-block d-md-none"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                            <input class="order-input" type="text" size="3" [value]="rrList.order" >                          
+                            <a class="down-link d-inline-block d-md-none"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                        </div>
+                        <div *ngSwitchCase="'TripleInput'" class="el-panel fourth" >
+                            <input-triple *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id1]="rValues.idFor1" [value1]="rValues.value1" [type1]="'text'" [id2]="rValues.idFor2" [value2]="rValues.value2" [type2]="'text'" [id3]="rValues.idFor3" [value3]="rValues.value3" [type3]="'text'"></input-triple> 
+                        </div>
+                        <div *ngSwitchCase="'TextAreaInput'" class="el-panel drake-textarea" >
+                            <input-textarea *ngFor="let rValues of rrList.values" [name]="rValues.label"  [rows]="'4'" [id]="rValues.idFor" [placeholder]="rValues.placeholder"></input-textarea>
+                        </div>
+                        <div *ngSwitchCase="'CalendarInput'" class="el-panel drake-calendar" >
+                            <input-calendar *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label"[id]="rValues.idFor" [value]=" " [type]="'text'"></input-calendar>
+                        </div>
+                        <div *ngSwitchCase="'SelectInput'" class="el-panel">                         
+                            <input-select [SelectDropdown]="rrList.values"></input-select>
+                        </div>
+                        <div *ngSwitchCase="'CheckboxInput'" class="el-panel drake-checkbox">
+                            <input-checkbox *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value"></input-checkbox> 
+                        </div>
+                        <div *ngSwitchCase="'CurrencyInput'" class="el-panel">
+                            <input-single *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'number'"></input-single> 
+                        </div>     
+                        <div *ngSwitchDefault class="el-panel" > 
+                            <input-single *ngFor="let rValues of rrList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single> 
+                        </div>
+                    </div>
+                </div>
+            </md-tab>
+            -->
+            </md-tab-group>
+
+            <br />
+            <patron-slide-toggle></patron-slide-toggle>
+            <staff-slide-toggle></staff-slide-toggle>
+
+            <br />
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-right">
+                            <button class="btn btn-primary" (click)="submitSettings()">{{SaveSettings}}</button>
+                            <button class="btn btn-link">{{ClearSettings}}</button>
+                    </div>
+                    <div class="col-12" *ngIf="SettingResults">
+                        <br /><br />
+                        <ba-alert [alertDismissible]="true" [alertType]="'success'" [alertMessage]="'You have successfully saved Ill Request settings. This will take a few minutes before they take into effect.'"></ba-alert>
+                    </div>  
+                </div>
+            </div>
+
+            <br /><br />
+            
+        </div>
+
+    </div>
+</div>
+
+</form>
+
+
+

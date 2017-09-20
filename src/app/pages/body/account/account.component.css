@@ -1,0 +1,92 @@
+.stopSticky {
+    position:relative !important;
+}
+sticky {
+    left:15% !important;
+    text-align:left;
+    float:right;
+    max-width:220px;
+    margin-top:50px;
+}
+sticky.sticky {
+    
+}
+sticky.undefined {
+    left:32% !important;
+}
+
+
+.account-navigation {
+    text-align:right;  
+}
+
+.resource-events {
+    background: #efefef;
+    color:grey;
+    cursor:pointer;
+    text-align:center;
+}
+.resource-event {
+    padding:10px;
+}
+.resource-event:hover, .resource-event:focus {
+    background: lightgrey;
+    color:grey;
+}
+
+nav {
+    
+}
+
+nav a {
+    font-size:1.25em;
+    font-weight:600;
+    display:block;
+    color: grey;
+}
+nav a.selected {
+    color: #3f51b5;
+}
+nav a:hover, nav a:focus  {
+    color: #3f51b5;
+    text-decoration:underline;
+}
+
+.checkbox-container {
+    display:block;
+    padding:10px 10px 0px 10px;
+}
+.social-color {
+    
+}
+.social-color i {
+    color: #3f51b5;
+    display:inline-block;
+}
+.slide-area {
+    display:inline-block;
+    vertical-align: top;
+    padding: 0px 10px;
+}
+.slide-area md-slide-toggle {
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.toggle-label {  
+    display: inline-block;
+    font-size: 1.5em;
+    margin-top: 16px;
+}
+.facebook-color {
+    color: #3b5998 !important;
+}
+.google-color {
+    color: #dd4b39 !important;
+}
+.twitter-color {
+    color: #00aced !important;
+}
+.pinterest-color {
+    color:#Bd081C !important;
+}

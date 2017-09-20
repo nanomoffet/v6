@@ -1,0 +1,122 @@
+<!-- Page/Settings Dialog -->
+<div class="control-panel-dialog">
+        <div class="edit-header">
+            <div class="edit-title">
+                <h6 class="edit-h6">Page Setting</h6>
+            </div>
+            <div class="edit-top-links">
+                <a id="edit-basic" class="btn btn-link active" aria-label="Close Search Overlay" (click)="toggleBasic()">Basic</a>
+                <a id="edit-layout" class="btn btn-link" aria-label="Close Search Overlay" (click)="toggleLayout()">Layout</a>
+            </div>                            
+        </div>      
+
+
+    <div class="edit-content">
+            
+        <!-- Page/Settings - Basic -->
+        <div *ngIf="basic" class="page-content-wrapper">
+            <form>
+                <div class="form-group">
+                    <label for="navTitle">Navigation Title</label>
+                    <input type="email" class="form-control" id="navTitle" aria-describedby="navTitleHelp" placeholder=" ">
+                    <small id="navTitleHelp" class="form-text text-muted">The name for this page, as it appears in navigations.</small>
+                </div>
+                <div class="form-group">
+                    <label for="pageTitle">Page Title</label>
+                    <input type="email" class="form-control" id="pageTitle" aria-describedby="pageTitleHelp" placeholder=" ">
+                    <small id="pageTitleHelp" class="form-text text-muted">The name of this page, as it appears in the top of the browser window.</small>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" id="pageEnabled"  aria-describedby="pageEnabledHelp" class="form-check-input">
+                        Enabled
+                    </label>
+                    <small id="pageEnabledHelp" class="form-text text-muted">Enabled pages are publicly visible. Disabling a page makes it inaccessible to visitors.</small>                
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" aria-describedby="descriptionHelp" rows="4" placeholder="Write here..."></textarea>
+                    <small id="descriptionHelp" class="form-text text-muted">Optional. Some templates surface this description, for instane in the header area. Furthermore, it's used if this page is indexed by a search engine.</small>                                    
+                </div>
+
+                <div class="form-group">
+                    <label for="selectForm">Page dropdown</label>
+                    <select class="form-control" id="selectForm" aria-describedby="selectFormHelp">
+                        <option>About</option>
+                        <option>Features</option>
+                        <option>Images</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <small id="selectFormHelp" class="form-text text-muted">Populate different options with the onchange()</small>                                                        
+                </div>
+
+                <div class="form-group">
+                    <label for="multSelectForm">Example multiple select</label>
+                    <select multiple class="form-control" id="multSelectForm" aria-describedby="multSelectFormHelp">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <small id="multSelectFormHelp" class="form-text text-muted">This Option with multiple selections for preferences.</small> 
+                </div>
+
+                <div class="form-group">
+                    <label for="fileForm">Insert a Photo or image.</label>
+                    <input type="file" class="form-control-file btn" id="fileForm">
+                 </div>
+
+
+
+
+            </form>
+        </div>
+        
+        <!-- Page/Settings - Layout -->
+        <div *ngIf="layout" class="page-content-wrapper">
+            <form>
+                <div class="form-group">
+                    <label for="npageTitle">Page Title</label>
+                    <input type="email" class="form-control" id="npageTitle" aria-describedby="npageTitleHelp" placeholder=" ">
+                    <small id="npageTitleHelp" class="form-text text-muted">The name for this page, as it appears in navigations.</small>
+                </div>
+                <div class="form-group">
+                    <label for="selectForm">Page Layout</label>
+                    <select class="form-control" id="selectForm" aria-describedby="selectFormHelp">
+                        <option>All Layouts</option>
+                        <option>About</option>
+                        <option>Features</option>
+                        <option>Images</option>
+                        <option>Team</option>
+                        <option>Contact</option>
+                        <option>Showcases</option>
+                        <option>Banner</option>
+                    </select>
+                    <small id="selectFormHelp" class="form-text text-muted">Layout Base to enahance.</small>                                                        
+                </div>
+            </form>
+        </div>
+
+        <!-- Page/Settings Overlay -->
+
+        <!-- Page/Settings Overlay -->
+
+        <!-- Page/Settings Overlay -->
+
+        <!-- Page/Settings Overlay -->
+
+
+
+    </div>  
+
+
+    <div class="edit-buttons">
+        <button class="edit-cancel" (click)="closeOverlay()">CANCEL</button>
+        <button class="edit-delete">DELETE</button>
+        <button class="edit-save">SAVE</button>
+    </div>
+</div>
+<!-- Page/Settings Overlay -->
+<div id="edit-overlay" class="edit-overlay" (click)="closeOverlay()"></div>

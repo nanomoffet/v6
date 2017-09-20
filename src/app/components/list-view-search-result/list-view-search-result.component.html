@@ -1,0 +1,74 @@
+<!--<app-search-facet></app-search-facet>
+facets, page index, list/gallery, predictive
+-->
+
+
+
+		<div class="search-facets">           
+			<search-all-facets></search-all-facets>		
+		</div>  
+		<div class="Search-Results">
+				<!-- 1.  pagination goes first -->
+				<div class="dropdown-container">
+					<div class="results-found"><b>{{searchResult.recordFound}}</b> Results Found</div>
+					<!--start at: {{searchResult.start}} -->
+					<div class="search-selects d-none d-md-inline-block"> 
+						<!-- Search Facets -->
+						<select>
+							<option>24 per page</option>
+							<option>48 per page</option>
+							<option>72 per page</option>
+							<option>96 per page</option>
+						</select>
+						<select>
+							<option>sort by Feature</option>
+							<option>sort by Cluster</option>
+							<option>sort by Merge</option>
+						</select>
+					</div>
+					<div class="dropdown-inputs-right"> 
+							<i class="fa fa-th-list" aria-hidden="true"></i><i class="fa fa-th active" aria-hidden="true"></i>
+					</div>
+				</div>
+				<!-- 2. Search Results goes second -->
+				<md-card *ngFor="let book of searchResult.books">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-12 col-sm-6 col-md-4 col-xs-4 col-lg-3">
+								<img src="assets/images/jacket_01.jpg" style="max-width: 150px;" />
+								<br/>
+								<img [src]="book.icon" />
+
+												
+							</div>
+							<div class="pull-right mx-auto col-12 col-sm-6 col-md-4 col-lg-3">
+								<button class="mx-auto btn btn-primary" style="margin-bottom:5px; min-width:165px;">Request This Item</button><br />							
+								<button class="mx-auto btn btn-secondary" style="margin-bottom:5px; min-width:165px;">Add to Clipboard</button><br />						
+								<button class="mx-auto btn btn-secondary" style="margin-bottom:5px; min-width:165px;">View Full Details</button><br />
+							</div>
+							<div class="col-12 col-sm-6 col-md-4 col-xs-4 col-lg-6">
+								<b>Title</b>
+								{{book.title}}<br />
+								<b>Author</b>
+								{{book.author}}<br />
+								<b>Date</b>
+								{{book.year}}<br />
+								<b>Publisher</b>
+								{{book.publisher}}<br />
+
+								no copy <br />
+
+								location information here... <br />
+							</div>							
+						</div>
+					</div>		
+				</md-card>
+				<!-- 3. Predictive Template here goes third -->
+
+
+			</div> 
+
+
+
+
+

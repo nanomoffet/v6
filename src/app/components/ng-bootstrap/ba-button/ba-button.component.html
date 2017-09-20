@@ -1,0 +1,13 @@
+<div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
+  <label class="btn btn-primary">
+    <input type="radio" [value]="1"> First
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" value="middle"> Second
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" [value]="3"> Third
+  </label>
+</div>
+<hr>
+<pre>You have selected: {{model}}</pre>

@@ -1,0 +1,45 @@
+<div class="feedback">
+    <div class="feedback-desc">
+      <h4>Feedback</h4>
+      <span>Please choose from the following:</span>
+    </div>
+    <div class="feedback-select">
+      <select>
+        <option value="" selected>-- Seclect a Option --</option>
+        <option value="1">Suggestion</option>
+        <option value="1">Questions</option>
+        <option value="1">Compliment</option>
+        <option value="1">Problems or Complaint</option>
+      </select>
+    </div>
+    <div class="feedback-details">
+      <textarea rows="7"></textarea>
+    </div>
+    <div class="feedback-inputs">
+        <div class="form-checkbox">
+            <input type="checkbox" id="reply-checkbox" /><label for="reply-checkbox"> Include Reply Email</label>
+        </div>
+        <div class="form-input has-success">          
+            <input id="feedback-name" type="text" placeholder="Name" required />
+            <label for="feedback-name"><span>Name</span></label>
+            <i class="fa fa-check alert-success" aria-hidden="true"></i>
+        </div>
+        <div class="form-input has-danger">        
+            <input id="feedback-email" type="text" placeholder="Email" required />
+            <label for="feedback-email"><span>Email</span></label>
+            <i class="fa fa-times alert-danger" aria-hidden="true"></i>
+        </div>
+        <div class="form-input">        
+            <input id="feedback-phone" type="text" placeholder="Phone" required />
+            <label for="feedback-phone"><span>Phone</span></label>
+        </div>
+    </div>
+    <div class="feedback-buttons">          
+        <input type="button" value="reset" class="btn btn-link" />   
+        <input type="button" value="send" class="btn btn-primary" />
+       
+    </div>
+    <div class="feedback-result">
+        <ba-alert [alertDismissible]="true" [alertType]="'success'" [alertMessage]="'Thank you for your submittal :)'"></ba-alert>
+    </div>
+  </div>

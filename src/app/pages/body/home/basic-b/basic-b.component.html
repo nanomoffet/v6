@@ -1,0 +1,21 @@
+<div class="container-fluid" style="margin-top:25px; margin-bottom:25px;">
+    <div class="row">
+        <div class="baseBbanner col-12">
+            <ba-carousel></ba-carousel>
+        </div>
+          <div class="baseBrow col-12">
+            <div class="container-fluid" style="margin-top:25px; margin-bottom:25px;">
+              <div class="row">
+                  <div class="col-12 col-md-4 col-lg-3">
+                     <Topic-Search [TopicSearch]="SearchTopic" [rowClass]="true"></Topic-Search>
+                  </div>
+                  <div class="col-12 col-md-8 col-lg-9">
+                        <h4>New Releases</h4>
+                        <app-slick-carousel></app-slick-carousel>
+                        <h4>New DVDs</h4>
+                        <app-slick-carousel></app-slick-carousel>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<p>
+  <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    Toggle
+  </button>
+</p>
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="card">
+    <div class="card-block">
+      This can be ANY HTML tag that you want to show or hide.
+      The button event fires a toggle on the (click) function that negates itself.
+    </div>
+  </div>
+</div>

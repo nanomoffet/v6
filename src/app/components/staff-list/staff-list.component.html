@@ -1,0 +1,62 @@
+<!--
+<div *ngFor="let sMenus of StaffMenu">
+  <h6>{{sMenus.label}}</h6>
+    <ul class="staff-list">
+          <li *ngFor="let sMenu of StaffMenu.items" > 
+            <h6>{{sMenu.label}}</h6>
+            <div>{{sMenu.order}}</div>
+            <div>{{sMenu.target}}</div>
+            <a>{{sMenu.url}}</a>           
+          </li>
+    </ul>
+</div>
+-->
+<h3>Staff Menu List</h3>
+<div class="container-fluid">
+  <div class="row" *ngIf="StaffMenu.data">
+    <div class="card staff-card col-12" *ngFor="let sMenus of StaffMenu.data">
+      <h4 class="card-title">{{sMenus?.label}}</h4>
+
+        <ul class="staff-list" *ngIf="sMenus.items">
+              <li *ngFor="let sMenu of sMenus.items"> 
+                <h6 *ngIf="sMenu.label" style="margin-top:15px;">{{sMenu?.label}}</h6>
+                <div *ngIf="sMenu.order" class="card-text" >Order: {{sMenu?.order}}</div>
+                <div *ngIf="sMenu.target" class="card-text" >Target: {{sMenu?.target}}</div>
+                <a *ngIf="sMenu.url" target="_blank" href="sMenu?.url">{{sMenu?.url}}</a>
+
+                    <ul class="staff-sublist" *ngIf="sMenu.subItems">
+                      <li *ngFor="let subMenu of sMenu.subItems">
+                        <h6 style="margin-top:15px;">Sub Items:</h6>
+                          <div *ngIf="subMenu.label" class="card-text">Label: {{subMenu?.label}}</div>  
+                          <div *ngIf="subMenu.target" class="card-text">Target: {{subMenu?.target}}</div>  
+                          <div *ngIf="subMenu.order" class="card-text">Order: {{subMenu?.order}}</div>  
+                          <!--
+                            <app-i-frame [url]="subMenu.url"></app-i-frame> 
+                          -->
+                          <div *ngIf="subMenu.url" class="card-text"> Url:    
+                            <a class="card-text" target="_blank" href="subMenu.url"> {{subMenu?.url}}</a>
+                          </div>    
+                      </li>  
+                    </ul>   
+              </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+export interface IstaffMenus {  data: Array<IstaffHeading> }
+export interface IstaffHeading { label: string, items: Array<Istaffmenu>}
+export interface Istaffmenu {   label:any, order: any, subItems: Array<Istafflist>,  target: any,  url:string } 
+export interface Istafflist {   label: string,   url: string, target: string, order: any }
+
+  <div>Target: {{staffMenu.target}}</div>
+  <div>Order: {{staffMenu.order}}</div>
+  <div>Items: {{staffMenu.subItems}}</div>
+
+
+
+
+-->

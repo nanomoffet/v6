@@ -1,0 +1,130 @@
+		<div class="search-facets">           
+			<search-all-facets></search-all-facets>		
+		</div>  
+		<div class="Search-Results">
+        <!-- 1.  pagination goes first -->
+        <search-result-desc [recordFound] = "searchResult.recordFound"></search-result-desc>
+				
+        <!-- 2. Search Results goes second -->
+        <div class="card-deck">
+
+          <div class="grid-view card " *ngFor="let book of searchResult.books">
+              <div *ngIf="book.locations; else noavalibility" [ngClass]="{'card-header': true, 'available-btn': book.locations.availableCount > 0, 'current-hold-btn': book.locations.availableCount ==='0'}">
+                    <span >Request this Item</span>
+                    <span >Current Holds</span>  
+              </div>                
+              <ng-template #noavalibility>
+                    <div class="card-header available-btn">
+                      Request this Item
+                    </div>                
+              </ng-template>
+              <div class="card-block">
+                <div class="card-img-top text-center">
+                  <img src="assets/images/jacket_01.jpg" style="max-width: 150px;box-shadow: 0px 5px 8px #999;" />
+                </div>
+                <div class="card-block button-icons">
+                    <button type="button" class="btn-icon" mdTooltip="save to Your List" mdTooltipPosition="above" ><i class="fa fa-heart" aria-hidden="true"></i></button>
+                    <button type="button" class="btn-icon" mdTooltip="view Full Details" mdTooltipPosition="above" ><i class="fa fa-info" aria-hidden="true"></i></button>
+                </div>
+                <!--
+                  None-View
+                  <h4 class="card-title">{{book.title | limitTo: 20}}{{text.length > 20 ? '...' : ''}}</h4>-->
+                <h4 class="card-title">{{book.title}}</h4>             
+                <p class="card-detail">
+                    {{book.author}}<br />
+                    {{book.publisher}}<br />
+                    {{book.year}} <br />                    
+                    <!-- <span class="available-item">Availability: 6 (of 9)</span><br /> -->              
+                </p>
+              </div>             
+          </div> 
+          
+          <!-- Availability View 
+          <div class="grid-view card">
+              <div class="card-header available-btn">
+                Request This Item
+              </div>           
+              <div class="card-block">
+                <div class="card-img-top text-center">
+                  <img src="assets/images/jacket_01.jpg" style="max-width: 150px;box-shadow: 0px 5px 8px #999;" />
+                </div>
+                <div class="card-block button-icons">
+                    <button type="button" class="btn-icon" mdTooltip="save to Your List" mdTooltipPosition="above" ><i class="fa fa-heart" aria-hidden="true"></i></button>
+                    <button type="button" class="btn-icon" mdTooltip="view Full Details" mdTooltipPosition="above" ><i class="fa fa-info" aria-hidden="true"></i></button>
+                </div>
+                <h4 class="card-title">Mocking Jay</h4>            
+                <p class="card-detail">
+                    Collins, Suzanne <br />
+                    Scholastic Press 2010 <br />
+                    Book (1) <br />
+                    Current Holds: 0 <br />
+                    <span class="available-item">Availability: 6 ( of 9)</span><br />              
+                </p>
+              </div>             
+          </div> -->
+          <!-- No Availability View      
+          <div class="grid-view card">
+              <div class="card-header not-available">
+                No Availability
+              </div>           
+              <div class="card-block">
+                <div class="card-img-top text-center">
+                  <img src="assets/images/jacket_01.jpg" style="max-width: 150px;box-shadow: 0px 5px 8px #999;" />
+                </div>
+                <div class="card-block button-icons">
+                    <button type="button" class="btn-icon" mdTooltip="save to Your List" mdTooltipPosition="above" ><i class="fa fa-heart" aria-hidden="true"></i></button>
+                    <button type="button" class="btn-icon" mdTooltip="view Full Details" mdTooltipPosition="above" ><i class="fa fa-info" aria-hidden="true"></i></button>
+                </div>
+                <h4 class="card-title">Mocking Jay</h4>            
+                <p class="card-detail">
+                    Collins, Suzanne <br />
+                    Scholastic Press 2010 <br />
+                    Print (0) <br />
+                    Current Holds: 0 <br />
+                    Availability: 0<br />
+                </p>
+              </div>
+          </div> -->
+          <!-- Current Holds 
+          <div class="grid-view card">
+              <div class="card-header current-hold-btn">
+                Current Holds: 9
+              </div>           
+              <div class="card-block">
+                <div class="card-img-top text-center">
+                  <img src="assets/images/jacket_01.jpg" style="max-width: 150px;box-shadow: 0px 5px 8px #999;" />
+                </div>
+                <div class="card-block button-icons">
+                    <button type="button" class="btn-icon" mdTooltip="save to Your List" mdTooltipPosition="above" ><i class="fa fa-heart" aria-hidden="true"></i></button>
+                    <button type="button" class="btn-icon" mdTooltip="view Full Details" mdTooltipPosition="above" ><i class="fa fa-info" aria-hidden="true"></i></button>
+                </div>
+                <h4 class="card-title">Mocking Jay</h4>            
+                <p class="card-detail">
+                    Collins, Suzanne <br />
+                    Scholastic Press 2010 <br />
+                    Book (1) <br />
+                    <span class="current-hold-item">Current Holds: 9</span><br />  
+                    Availability: 0 ( of 3) <br />
+                </p>
+              </div>
+          </div> -->
+        </div> <!-- end -  div.card-deck -->
+
+			</div> 
+
+
+
+      <div class="search-rightSide">
+        <!-- 3. Predictive Template here goes third -->
+
+        
+        <br />
+        <h4>Current Users</h4>
+        <pie-chart [pieHeight]="'200px'"></pie-chart>
+        <div class="chart-desc">
+          Staff : 25% <br />
+          Patrons : 40% <br />
+          Staff : 35% <br />
+        </div>
+      </div>
+

@@ -1,0 +1,76 @@
+
+.baseEbanner {
+ text-align: center;
+}
+
+.baseEbanner img {
+    max-width:100%;
+}
+
+.baseErow {
+    margin-top:25px;
+    margin-bottom:25px;
+}
+.baseEshowcase {
+}
+.baseE3cols {
+    padding-top:25px;
+    padding-bottom:25px;
+    
+}
+
+.topic-search {
+    list-style: none;
+    padding:2px 25px 2px 2px;
+}
+.topic-search a {
+    cursor:pointer;
+}
+.topic-search i {
+    font-size: 0.5em;
+    vertical-align: top;
+    margin-top: 0.5em;
+}
+
+.image-box {
+    padding:10px 10px 10px 15px;
+    text-align: center;
+    vertical-align: top;
+    display:inline-block;
+    width:95%;
+}
+
+.image-box img {
+    width:95%;
+    /*
+    max-width:280px;
+    */
+}
+
+
+
+.link-one {
+    display:inline-block;
+	height:100%;
+	padding:0px !important;
+	background-image: url('/assets/images/shel_silverstein_1959.jpg');
+    height:50vh;
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.link-2 {
+    display:inline-block;
+	height:100%;
+	padding:0px !important;
+	background-image: url('/assets/images/lgp-safety.jpg');
+    height:50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+
+
+

@@ -1,0 +1,28 @@
+
+<div class="select-menu" *ngFor="let slist of SelectDropdown">
+  <label *ngIf="!edit" [for]="slist.idFor">{{slist.label}}</label>
+  <input *ngIf="edit" [(ngModel)]="slist.label" type="text" class="input-label">
+  <select [id]="slist.idFor" [name]="slist.idFor">
+        <option *ngFor="let sOptions of slist.options" [value]="sOptions.value" [selected]="sOptions.selected">
+            {{sOptions.name}}
+        </option>
+  </select>
+</div>
+
+<!--
+<label >{{name}}</label>
+<select >
+  <option *ngFor="let slist of SelectDropdown" [value]="slist.value" [selected]="slist.selected">{{ slist.name }}</option>
+
+</select>
+
+
+<div class="drake-select" *ngFor="let rValues of rList.values">
+    <label >{{rValues.name}}</label>
+    <select [id]="rValues.idFor" [name]="rValues.idFor"> 
+        <option *ngFor="let rValue of rValues.options" [value]="rValue.value" [selected]="rValue.selected">
+            {{rValue.name}}
+        </option>
+    </select>
+</div>
+-->

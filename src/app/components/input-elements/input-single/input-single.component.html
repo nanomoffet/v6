@@ -1,0 +1,7 @@
+<label *ngIf="!edit" [for]="for">{{name}}</label>
+<input *ngIf="edit" [(ngModel)]="name" type="text" class="input-label" (keyup.enter)="onKeyUp()">
+<input [id]="id" [name]="id" [type]="type" [value]="value" /> 
+
+<!--
+    <input-single *ngFor="let rValues of rList.values" [for]="rValues.idFor" [name]="rValues.label" [id]="rValues.idFor" [value]="rValues.value" [type]="'text'"></input-single> 
+ -->

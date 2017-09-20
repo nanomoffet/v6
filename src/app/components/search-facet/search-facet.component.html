@@ -1,0 +1,33 @@
+<div class="checkbox-form">
+  <h6 [id]="id" (click)="toggleFacet()"><i class="fa fa-angle-down"></i> {{FacetSearch.title}}</h6>
+
+  <!-- *ngIf statement on the UL>LI so we can check the different types of facet templates -->
+
+<!--  Checkboxes
+  <ul class="facet-list">
+      <li *ngFor="let fList of FacetSearch.facetList" ><input [id]="fList.input" type="checkbox" /><label [for]="fList.input">{{fList.description}} ({{fList.badge}})</label></li>
+  </ul>
+-->
+
+<!-- Radio Inputs -->
+<ul class="facet-list">
+    <li *ngFor="let fList of FacetSearch.facetList" >
+        <input [id]="fList.input" type="radio" [name]="id" />
+        <label [for]="fList.input">
+          {{fList.description}} ({{fList.count}})
+        </label>
+    </li>
+</ul>
+
+  
+
+<!-- Slider with a Min/Max Values -->
+
+<!-- Ratings on how many stars. They Choose the onchange which it filters with "AND" -->
+
+<!-- Slider with a Min/Max Values -->
+
+<!-- Default is Link "And" -->
+
+
+</div>

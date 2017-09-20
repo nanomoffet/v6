@@ -1,0 +1,42 @@
+
+
+<!-- Login --> 
+<div class="auth-main">
+    <div class="login-text">{{loginText.Title}}</div>
+    <label class="text-danger">{{errorMessage}}</label>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="login-form form-horizontal">
+        <div class="form-group" [ngClass]="{'has-error': (!cid.valid && cid.touched), 'has-success': (cid.valid && cid.touched)}">
+            <md-input-container class="full-width">
+              <input mdInput [formControl]="cid" type="text" class="form-control" id="cidInput" placeholder="{{loginText.CustomerID}}">
+              <md-error *ngIf="cid.hasError('required')">Please enter a valid customer ID</md-error>
+            </md-input-container>
+        </div>       
+        <div class="form-group" [ngClass]="{'has-error': (!lid.valid && lid.touched), 'has-success': (lid.valid && lid.touched)}">
+            <md-input-container class="full-width">
+              <input mdInput [formControl]="lid" type="text" class="form-control" id="lidInput" placeholder="{{loginText.LibraryID}}">
+              <md-error *ngIf="lid.hasError('required')">Please enter a valid Library ID</md-error>
+            </md-input-container>
+        </div>
+        <div class="form-group" [ngClass]="has-success">
+            <md-input-container class="full-width">
+              <input mdInput [formControl]="userID" type="text" class="form-control" id="inputUserID" placeholder="{{loginText.UserID}}">
+            </md-input-container>
+        </div>
+        <div class="form-group" [ngClass]="has-success">
+            <md-input-container class="full-width">
+              <input mdInput [formControl]="password" type="password" class="form-control" id="inputPassword3" placeholder="{{loginText.Password}}">
+            </md-input-container>
+        </div>
+        <div class="form-group">
+            <!-- Remember Me functionality() -->
+            <!-- <div class="remember-box text-center"><md-checkbox>Remember Me</md-checkbox></div> -->
+            <button [disabled]="!form.valid" type="submit" class="btn btn-primary btn-lg btn-block">{{loginText.Sign_in}}</button>
+        </div>
+      
+    </form>
+</div>
+
+<!--<a routerLink="/body/login" class="forgot-pass">{{loginText.Forgot_password}}</a>-->
+<!-- <a routerLink="/register" class="auth-link" >{{loginText.Signup_link}}</a> -->
+
+

@@ -1,0 +1,49 @@
+
+<!-- Search Icon - moved to header
+<div class="d-flex d-md-none col-3 search-icon" (click)="OpenOverlay()">
+        <i aria-hidden="true" class="fa fa-2x fa-search"></i>
+</div>
+<div class="search-icon-input" (click)="OpenOverlay()">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    Type anywhere to <span class="bold">search</span>
+</div>
+-->
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="search-overlay" style="display:none;">
+    <div class="inner">
+        <div class="overlay-header">
+            <h4 id="search-title" class="title">A-G providing Your (Library) Needs</h4>
+            <a class="exit" aria-label="Close Search Overlay" (click)="CloseOverlay()"><i class="fa fa-times" aria-hidden="true"></i></a>
+        </div>      
+    </div>
+    <div class="overlay">
+        <input #searchOverlayInput (keyup.enter)="search(searchOverlayInput.value); CloseOverlay()"  id="overlay-search" class="no-border overlay-search bg-transparent" placeholder="Search..." autocomplete="off" spellcheck="false">
+
+    </div>  
+    <div class="overlay-IndexResource">
+        <!--<select class="overlay-index">
+            <option value="1">All Heading</option>
+            <option value="1">Title</option>
+            <option value="1">Author</option>
+            <option value="1">ISBN</option>
+            <option value="1"></option>
+            <option value="1"></option>        
+        </select>-->
+         <app-search-indexes class="overlay-index"></app-search-indexes> 
+        <a class="overlay-resource">Resources <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+    </div>
+    <br />
+    <div class="overlay-suggestions">
+        <b>suggestions : </b><span id="suggest-phrase" class="suggest-phrase"></span>
+        <ul id="suggest-list" class="suggest-list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>   
+</div>
+
+

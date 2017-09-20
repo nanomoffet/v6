@@ -1,0 +1,28 @@
+.box-images {
+    padding-top:40px;
+}
+
+.image-box {
+    padding:10px 10px 10px 15px;
+    text-align: center;
+    vertical-align: top;
+    display:inline-block;
+    width:49%;
+}
+.image-box img {
+    width:100%;
+    max-width:240px
+}
+
+.showcases {
+    padding:10px;
+}
+
+@media screen and (min-width: 768px) {
+    .image-box {
+        padding:10px 25px;
+        display:block;
+        width:initial;
+    }
+
+}
